@@ -1,0 +1,69 @@
+{
+  "start": "https://wavedash.com/games/vector-anti-gravity-racing",
+  "origin": "https://wavedash.com",
+  "gated": false,
+  "sessionRenewal": "per-page-load playKey (server-rendered on the game page) -> embed shell -> ~1 h gameplay JWT (Authorization: Bearer) for every build-host request; minted fresh by tools/update.mjs / tools/capture.mjs (anonymous user is enough)",
+  "gameHost": "mx70fsjxynf8mke9yqthamtfcx8dtssc-<fnv32(userId)>-<fnv32(gameBuildId)>.builds.wavedashcdn.com (per-user, per-build host; anonymous-JWT capture host b87bd41c-1c1257d5, browser-session host (logged-in) abc3e19d-1c1257d5 — the build files are byte-identical on both; the drift probe re-verified all 86 files on a fresh anonymous host)",
+  "build": {
+    "gameBuildId": "mn72nb0gxmx9kbcvqffxsmyr1d8g0qj0",
+    "buildHash": "1c1257d5",
+    "buildNumber": 95,
+    "buildMessage": "VECTOR 1.7: performance and graphics improvements",
+    "engine": "CUSTOM",
+    "entrypoint": "index.html",
+    "buildSizeBytes": 172198767,
+    "gameCloudId": "mx70fsjxynf8mke9yqthamtfcx8dtssc",
+    "r2KeyPrefix": "jd71mv2yb318bjcr17rp4azq898d1999/j973gcfqezjcck8xqz1150zdas8dtm8b/builds/f67c3e3d-786e-4d37-b984-e7dcd747f760/"
+  },
+  "requests": 150,
+  "fetched": 86,
+  "bytes": 172916186,
+  "paths": [
+    "index.html",
+    "assets/index-DphGw8Ou.js",
+    "assets/index-J7X__Wjw.css",
+    "assets/game-CsnOSIff.js",
+    "assets/player-Cd-Kznkt.js",
+    "assets/renderer-setup--EktvnNe.js",
+    "assets/award-scene-D9Dc5ufv.js",
+    "assets/HDRLoader-C77IBAVq.js",
+    "assets/client-BtP_tmtQ.js",
+    "assets/audio-preparation.worker-CEAJS9BC.js",
+    "assets/geist-98bbbccb-BGnTDqni.woff2 + geist-mono-013b2f2f-pyAoGB9p.woff2",
+    "models/ (5 circuit kits + 6 meridian kits + meridian-materials + launch-bay + awards + port-life + 5 ships + 2 liveries + 4 weapons + 7 previews)",
+    "environment/ (3 HDRI + 8 lunar/regolith textures)",
+    "audio/ (19 music tracks + intro-vector.mp3)",
+    "ui/awards/ (medal + trophy x gold/silver/bronze)",
+    "favicon.svg",
+    "embed",
+    "embed.js",
+    "embed.css",
+    "sw-embed.js"
+  ],
+  "unresolved": [],
+  "unreachable": [
+    { "status": 404, "path": "favicon.ico", "probes": 1, "note": "declared by browsers only; the build ships favicon.svg" },
+    { "status": 404, "path": "/vector/preferences-v1.json", "probes": 1, "note": "Wavedash userfs cloud-save path fetched at runtime (GET) — served by the platform backend for a signed-in user, not a static build file; recorded gap" },
+    { "status": 404, "path": "/vector/progress-v1.json", "probes": 1, "note": "Wavedash userfs cloud-save path (career progress) — backend, not a static build file; recorded gap" },
+    { "status": 404, "path": "/auth/token (GET)", "probes": 1, "note": "session endpoint; GET is answered only with a valid embed session (the browser session got 200 on the same path with the SDK headers)" },
+    { "status": 404, "path": "/auth/refresh (POST only)", "probes": 1, "note": "SW-internal POST endpoint (`/auth/refresh`, POST only) — GET is not routed" }
+  ],
+  "external": [
+    { "host": "convex-api.wavedash.com", "kind": "backend", "note": "Convex realtime backend for platform SDK state (lobbies, cloud saves, leaderboards) — dynamic endpoints, never captured" },
+    { "host": "uploads.wavedash.com / ugc.wavedashcdn.com", "kind": "platform storage", "note": "platform cover images, screenshot/UGC upload + userfs cloud saves — runtime-only endpoints" },
+    { "host": "o4510067032457216.ingest.us.sentry.io", "kind": "telemetry", "note": "SDK error reporting — runtime-only endpoint" },
+    { "host": "accounts.google.com / google.com / lh3.googleusercontent.com", "kind": "auth", "note": "Google sign-in iframe + avatars on the platform page — platform chrome, outside the game closure" },
+    { "host": "unpkg.com", "kind": "platform page dependency", "note": "one request observed from the wavedash.com platform page (not the game build); platform chrome, outside the game closure" }
+  ],
+  "notes": [
+    "platform page (wavedash.com/games/vector-anti-gravity-racing) = SvelteKit shell + GamePlayer; the game itself runs on the per-build builds.wavedashcdn.com host inside an iframe whose src carries the playKey + sdkconfig",
+    "the build host requires auth: without the JWT every build-file path 401s (except embed.js/embed.css/sw-embed.js, which are public); the platform mints an anonymous JWT from the same playKey flow",
+    "the embed document replaces its own body with index.html (document.write-style boot) and sw-embed.js authorizes every subsequent fetch (Authorization + X-Wd-Sw: jwt)",
+    "the build is a Vite production bundle: index.html -> assets/index-DphGw8Ou.js (React + React-Aria UI vendors, app music/track/ship tables, bundled three.js WebGPU+TSL, app UI) -> game-CsnOSIff.js (race sim), player-Cd-Kznkt.js (intro/garage), renderer-setup--EktvnNe.js + award-scene-D9Dc5ufv.js (scenery), HDRLoader-C77IBAVq.js (vendored three.js HDR loaders), audio-preparation.worker-CEAJS9BC.js (procedural audio worker), client-BtP_tmtQ.js (Wavedash SDK client shim)",
+    "encoding: the build host serves the text assets (index.html, JS/CSS chunks, embed.css) brotli-compressed (content-encoding: br). The capture stores the content-decoded bytes exactly as a browser receives them, so a naive static server serves the mirror correctly as identity; derive/audit inflate in memory only (never write re-encoded variants)",
+    "closure method: runtime network log of a full browser session (page load, main menu, intro/garage asset set, a complete 3-lap race and the finish screen — docs/network-log-2026-10-13.jsonl) + the game's embedded tables (five-circuit table vJ, scenery->kit map, music library table, ship table Xu, lunar/award textures in the intro set) — union probed to fixpoint; nothing referenced is missing",
+    "payload size: captured closure 172916186 bytes vs upstream buildSizeBytes 172198767 — the delta is the platform shell files (embed/embed.js/embed.css/sw-embed.js) and upload-side build metadata/artifacts not reachable by any runtime request",
+    "capture layout: repo root == the build-host root; every path is served at the same relative URL the game requests, so a static server reproduces the game's requests 1:1",
+    "network logs: docs/network-log-2026-10-13.jsonl (browser session; runtime-generated blob: audio worklet URLs elided)"
+  ]
+}
