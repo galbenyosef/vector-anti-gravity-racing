@@ -1,0 +1,529 @@
+{
+  "generated": "2026-10-13T04:01:48.515Z",
+  "host": "mx70fsjxynf8mke9yqthamtfcx8dtssc-b87bd41c-1c1257d5.builds.wavedashcdn.com",
+  "build": "1c1257d5",
+  "captured": [
+    {
+      "p": "assets/award-scene-D9Dc5ufv.js",
+      "status": 200,
+      "bytes": 3841,
+      "enc": "br"
+    },
+    {
+      "p": "assets/audio-preparation.worker-CEAJS9BC.js",
+      "status": 200,
+      "bytes": 4455,
+      "enc": "br"
+    },
+    {
+      "p": "assets/client-BtP_tmtQ.js",
+      "status": 200,
+      "bytes": 206,
+      "enc": "br"
+    },
+    {
+      "p": "assets/geist-98bbbccb-BGnTDqni.woff2",
+      "status": 200,
+      "bytes": 29288,
+      "enc": ""
+    },
+    {
+      "p": "assets/HDRLoader-C77IBAVq.js",
+      "status": 200,
+      "bytes": 395149,
+      "enc": "br"
+    },
+    {
+      "p": "assets/player-Cd-Kznkt.js",
+      "status": 200,
+      "bytes": 81248,
+      "enc": "br"
+    },
+    {
+      "p": "assets/geist-mono-013b2f2f-pyAoGB9p.woff2",
+      "status": 200,
+      "bytes": 23108,
+      "enc": ""
+    },
+    {
+      "p": "assets/index-J7X__Wjw.css",
+      "status": 200,
+      "bytes": 372266,
+      "enc": "br"
+    },
+    {
+      "p": "assets/renderer-setup--EktvnNe.js",
+      "status": 200,
+      "bytes": 18038,
+      "enc": "br"
+    },
+    {
+      "p": "assets/index-DphGw8Ou.js",
+      "status": 200,
+      "bytes": 1577466,
+      "enc": "br"
+    },
+    {
+      "p": "assets/game-CsnOSIff.js",
+      "status": 200,
+      "bytes": 871481,
+      "enc": "br"
+    },
+    {
+      "p": "audio/afterburn-club.mp3",
+      "status": 200,
+      "bytes": 4003775,
+      "enc": ""
+    },
+    {
+      "p": "audio/breakline-fever.mp3",
+      "status": 200,
+      "bytes": 3487822,
+      "enc": ""
+    },
+    {
+      "p": "audio/breakneck-filter.mp3",
+      "status": 200,
+      "bytes": 4377556,
+      "enc": ""
+    },
+    {
+      "p": "audio/dance-robo-jam-2.mp3",
+      "status": 200,
+      "bytes": 4417884,
+      "enc": ""
+    },
+    {
+      "p": "audio/gravity-well.mp3",
+      "status": 200,
+      "bytes": 3763986,
+      "enc": ""
+    },
+    {
+      "p": "audio/intro-vector.mp3",
+      "status": 200,
+      "bytes": 1422241,
+      "enc": ""
+    },
+    {
+      "p": "audio/dance-robo-jam.mp3",
+      "status": 200,
+      "bytes": 4656876,
+      "enc": ""
+    },
+    {
+      "p": "audio/grid-runners.mp3",
+      "status": 200,
+      "bytes": 4201822,
+      "enc": ""
+    },
+    {
+      "p": "audio/dockside-ignition.mp3",
+      "status": 200,
+      "bytes": 4157237,
+      "enc": ""
+    },
+    {
+      "p": "audio/jesus-on-es.mp3",
+      "status": 200,
+      "bytes": 3573687,
+      "enc": ""
+    },
+    {
+      "p": "audio/metallic-dropouts-2.mp3",
+      "status": 200,
+      "bytes": 4197518,
+      "enc": ""
+    },
+    {
+      "p": "audio/menu-groove.mp3",
+      "status": 200,
+      "bytes": 5227111,
+      "enc": ""
+    },
+    {
+      "p": "audio/metallic-dropouts-3.mp3",
+      "status": 200,
+      "bytes": 4059758,
+      "enc": ""
+    },
+    {
+      "p": "audio/metallic-dropouts.mp3",
+      "status": 200,
+      "bytes": 4344590,
+      "enc": ""
+    },
+    {
+      "p": "audio/neon-undertow.mp3",
+      "status": 200,
+      "bytes": 4654078,
+      "enc": ""
+    },
+    {
+      "p": "embed",
+      "status": 200,
+      "bytes": 1776,
+      "enc": "br"
+    },
+    {
+      "p": "embed.css",
+      "status": 200,
+      "bytes": 9831,
+      "enc": "br"
+    },
+    {
+      "p": "embed.js",
+      "status": 200,
+      "bytes": 732728,
+      "enc": "br"
+    },
+    {
+      "p": "audio/raw-club-mix.mp3",
+      "status": 200,
+      "bytes": 4177296,
+      "enc": ""
+    },
+    {
+      "p": "environment/docklands_02_1k.hdr",
+      "status": 200,
+      "bytes": 1543169,
+      "enc": ""
+    },
+    {
+      "p": "environment/lunar-earth-512.png",
+      "status": 200,
+      "bytes": 58468,
+      "enc": ""
+    },
+    {
+      "p": "environment/launch-bay_1k.hdr",
+      "status": 200,
+      "bytes": 1317842,
+      "enc": ""
+    },
+    {
+      "p": "environment/lunar-earth-data-512.png",
+      "status": 200,
+      "bytes": 102278,
+      "enc": ""
+    },
+    {
+      "p": "environment/lunar-earth.png",
+      "status": 200,
+      "bytes": 151983,
+      "enc": ""
+    },
+    {
+      "p": "audio/velocity-bloom.mp3",
+      "status": 200,
+      "bytes": 4652638,
+      "enc": ""
+    },
+    {
+      "p": "environment/lunar-milky-way-512.png",
+      "status": 200,
+      "bytes": 48700,
+      "enc": ""
+    },
+    {
+      "p": "environment/lunar-earth-data.png",
+      "status": 200,
+      "bytes": 345849,
+      "enc": ""
+    },
+    {
+      "p": "environment/regolith-detail-256.png",
+      "status": 200,
+      "bytes": 135747,
+      "enc": ""
+    },
+    {
+      "p": "environment/lunar-milky-way.png",
+      "status": 200,
+      "bytes": 439595,
+      "enc": ""
+    },
+    {
+      "p": "environment/regolith-detail.png",
+      "status": 200,
+      "bytes": 545174,
+      "enc": ""
+    },
+    {
+      "p": "favicon.svg",
+      "status": 200,
+      "bytes": 234,
+      "enc": "br"
+    },
+    {
+      "p": "audio/photo-finish.mp3",
+      "status": 200,
+      "bytes": 4138269,
+      "enc": ""
+    },
+    {
+      "p": "index.html",
+      "status": 200,
+      "bytes": 646,
+      "enc": "br"
+    },
+    {
+      "p": "audio/vector-race.mp3",
+      "status": 200,
+      "bytes": 4501345,
+      "enc": ""
+    },
+    {
+      "p": "audio/overclock-anthem.mp3",
+      "status": 200,
+      "bytes": 3999555,
+      "enc": ""
+    },
+    {
+      "p": "environment/shanghai_bund_1k.hdr",
+      "status": 200,
+      "bytes": 1640377,
+      "enc": ""
+    },
+    {
+      "p": "models/launch-bay.glb",
+      "status": 200,
+      "bytes": 1666432,
+      "enc": ""
+    },
+    {
+      "p": "models/awards.glb",
+      "status": 200,
+      "bytes": 2187056,
+      "enc": ""
+    },
+    {
+      "p": "models/meridian-flying-kit.glb",
+      "status": 200,
+      "bytes": 1791668,
+      "enc": ""
+    },
+    {
+      "p": "models/kestrel-wavedash-player.glb",
+      "status": 200,
+      "bytes": 5166012,
+      "enc": ""
+    },
+    {
+      "p": "models/manta-claude-player.glb",
+      "status": 200,
+      "bytes": 3870492,
+      "enc": ""
+    },
+    {
+      "p": "models/meridian-hotel-kit.glb",
+      "status": 200,
+      "bytes": 3150104,
+      "enc": ""
+    },
+    {
+      "p": "models/manta-player.glb",
+      "status": 200,
+      "bytes": 3978712,
+      "enc": ""
+    },
+    {
+      "p": "models/meridian-skyline-kit.glb",
+      "status": 200,
+      "bytes": 1671360,
+      "enc": ""
+    },
+    {
+      "p": "models/kestrel-player.glb",
+      "status": 200,
+      "bytes": 4304376,
+      "enc": ""
+    },
+    {
+      "p": "models/meridian-street-kit.glb",
+      "status": 200,
+      "bytes": 1058072,
+      "enc": ""
+    },
+    {
+      "p": "models/meridian-transit-kit.glb",
+      "status": 200,
+      "bytes": 1264472,
+      "enc": ""
+    },
+    {
+      "p": "models/meridian-materials.glb",
+      "status": 200,
+      "bytes": 3777248,
+      "enc": ""
+    },
+    {
+      "p": "models/previews/kestrel.jpg",
+      "status": 200,
+      "bytes": 32223,
+      "enc": ""
+    },
+    {
+      "p": "models/previews/manta-claude.jpg",
+      "status": 200,
+      "bytes": 27627,
+      "enc": ""
+    },
+    {
+      "p": "models/port-life.glb",
+      "status": 200,
+      "bytes": 253092,
+      "enc": ""
+    },
+    {
+      "p": "models/previews/kestrel-wavedash.jpg",
+      "status": 200,
+      "bytes": 31459,
+      "enc": ""
+    },
+    {
+      "p": "models/previews/manta.jpg",
+      "status": 200,
+      "bytes": 27196,
+      "enc": ""
+    },
+    {
+      "p": "models/previews/monarch.jpg",
+      "status": 200,
+      "bytes": 33366,
+      "enc": ""
+    },
+    {
+      "p": "models/previews/vesper.jpg",
+      "status": 200,
+      "bytes": 26630,
+      "enc": ""
+    },
+    {
+      "p": "models/previews/talon.jpg",
+      "status": 200,
+      "bytes": 26888,
+      "enc": ""
+    },
+    {
+      "p": "models/meridian-venue-kit.glb",
+      "status": 200,
+      "bytes": 1878764,
+      "enc": ""
+    },
+    {
+      "p": "models/monarch-player.glb",
+      "status": 200,
+      "bytes": 4031532,
+      "enc": ""
+    },
+    {
+      "p": "models/solstice-port-kit.glb",
+      "status": 200,
+      "bytes": 3474040,
+      "enc": ""
+    },
+    {
+      "p": "models/talon-player.glb",
+      "status": 200,
+      "bytes": 3919928,
+      "enc": ""
+    },
+    {
+      "p": "models/vesper-player.glb",
+      "status": 200,
+      "bytes": 4028336,
+      "enc": ""
+    },
+    {
+      "p": "models/weapons/cannon.glb",
+      "status": 200,
+      "bytes": 1322376,
+      "enc": ""
+    },
+    {
+      "p": "models/weapons/mines.glb",
+      "status": 200,
+      "bytes": 1958772,
+      "enc": ""
+    },
+    {
+      "p": "sw-embed.js",
+      "status": 200,
+      "bytes": 30200,
+      "enc": "br"
+    },
+    {
+      "p": "ui/awards/medal-bronze.webp",
+      "status": 200,
+      "bytes": 10862,
+      "enc": ""
+    },
+    {
+      "p": "ui/awards/medal-gold.webp",
+      "status": 200,
+      "bytes": 10794,
+      "enc": ""
+    },
+    {
+      "p": "ui/awards/medal-silver.webp",
+      "status": 200,
+      "bytes": 9818,
+      "enc": ""
+    },
+    {
+      "p": "ui/awards/trophy-bronze.webp",
+      "status": 200,
+      "bytes": 14918,
+      "enc": ""
+    },
+    {
+      "p": "models/weapons/missile.glb",
+      "status": 200,
+      "bytes": 1898020,
+      "enc": ""
+    },
+    {
+      "p": "ui/awards/trophy-gold.webp",
+      "status": 200,
+      "bytes": 15442,
+      "enc": ""
+    },
+    {
+      "p": "ui/awards/trophy-silver.webp",
+      "status": 200,
+      "bytes": 14808,
+      "enc": ""
+    },
+    {
+      "p": "models/weapons/rockets.glb",
+      "status": 200,
+      "bytes": 1905368,
+      "enc": ""
+    },
+    {
+      "p": "models/nocturne-city-kit.glb",
+      "status": 200,
+      "bytes": 7322844,
+      "enc": ""
+    },
+    {
+      "p": "models/sirocco-oasis-kit.glb",
+      "status": 200,
+      "bytes": 6458992,
+      "enc": ""
+    },
+    {
+      "p": "models/shackleton-base-kit.glb",
+      "status": 200,
+      "bytes": 7799900,
+      "enc": ""
+    }
+  ],
+  "absent": [
+    {
+      "p": "favicon.ico",
+      "status": 404
+    }
+  ]
+}

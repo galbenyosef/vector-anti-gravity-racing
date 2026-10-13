@@ -1,0 +1,351 @@
+{
+  "generated": "2026-10-13",
+  "origin": "https://wavedash.com/games/vector-anti-gravity-racing",
+  "files": {
+    "assets/audio-preparation.worker-CEAJS9BC.js": {
+      "bytes": 4455,
+      "sha256": "5d88765cbc6e5f36a9100a0f89198c77defd5aaac100dd351a2195ee35c62057"
+    },
+    "assets/award-scene-D9Dc5ufv.js": {
+      "bytes": 3841,
+      "sha256": "1bfaee4f48d1a96fa673b7ad9038ee5648f81e5a2aba7b930936b5e43c09acd7"
+    },
+    "assets/client-BtP_tmtQ.js": {
+      "bytes": 206,
+      "sha256": "c01401cb39e0dcbab94ca8f6a4dffb9e7aac3411543c4de361dfe2cd0f508464"
+    },
+    "assets/game-CsnOSIff.js": {
+      "bytes": 871481,
+      "sha256": "3b0330327be03ce22dee9e9dabf1a51ce7320bf2d1321cbd60a3c770f170ac4e"
+    },
+    "assets/geist-98bbbccb-BGnTDqni.woff2": {
+      "bytes": 29288,
+      "sha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608"
+    },
+    "assets/geist-mono-013b2f2f-pyAoGB9p.woff2": {
+      "bytes": 23108,
+      "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b"
+    },
+    "assets/HDRLoader-C77IBAVq.js": {
+      "bytes": 395149,
+      "sha256": "7b211936ab761c7a2c9c5f2c9dbfb7ffcf0977d8b7d9a63de68889caba045480"
+    },
+    "assets/index-DphGw8Ou.js": {
+      "bytes": 1577466,
+      "sha256": "0b3fea955da62724d7747788bc14130b9353482a14fc1c6d42a2f195a7f813d0"
+    },
+    "assets/index-J7X__Wjw.css": {
+      "bytes": 372266,
+      "sha256": "972b8d4d8e0ef1dcf9818eae66942caea722c8eb0b60c3d366ec65fa7ed2cff6"
+    },
+    "assets/player-Cd-Kznkt.js": {
+      "bytes": 81248,
+      "sha256": "dcaffd595783df3f11782b7458d225fc313d3930e2bc0c0fde25c85e08a4804f"
+    },
+    "assets/renderer-setup--EktvnNe.js": {
+      "bytes": 18038,
+      "sha256": "80a56d1113cfb18613b073088d163e05b3ae0ea90a1b0b33d7f3a19cca545016"
+    },
+    "audio/afterburn-club.mp3": {
+      "bytes": 4003775,
+      "sha256": "dc1cbce5473723fea2aa69214f5eee0db84a807d4aa4d58f224c32eddd407443"
+    },
+    "audio/breakline-fever.mp3": {
+      "bytes": 3487822,
+      "sha256": "29bcb0361795233605d3a69bdbb93932d051cb7626c7e740d9796fa999e3337c"
+    },
+    "audio/breakneck-filter.mp3": {
+      "bytes": 4377556,
+      "sha256": "6c52b67adba06013779d97ff2b3defaa05b6fddba0b7ea976c559bf7c0f6d741"
+    },
+    "audio/dance-robo-jam-2.mp3": {
+      "bytes": 4417884,
+      "sha256": "c125e086f8aa38914ffe138fcdcc28a2eab35326613271fdf5525d10e99e8024"
+    },
+    "audio/dance-robo-jam.mp3": {
+      "bytes": 4656876,
+      "sha256": "183c2264f89f1eac485fe56d404407dbc94de84eca38c2879e8d8a0c4cf6d919"
+    },
+    "audio/dockside-ignition.mp3": {
+      "bytes": 4157237,
+      "sha256": "97eb19f0b0fb85dc1e855a8b09be936e7fc1eecb040a2aecc02308e2ff9a48a4"
+    },
+    "audio/gravity-well.mp3": {
+      "bytes": 3763986,
+      "sha256": "af2d10b2fd35db0a379a603a98a279dfd6e5f47d318c255b3005b68c5e37d34b"
+    },
+    "audio/grid-runners.mp3": {
+      "bytes": 4201822,
+      "sha256": "bf805d28bb21da468090ba84736682d4daa3797330462dca91b1be8150fde8e6"
+    },
+    "audio/intro-vector.mp3": {
+      "bytes": 1422241,
+      "sha256": "c31ff6959086f14a37ff239b17f3a45e108c240c081c28fb7ff53f7dfd62e6b4"
+    },
+    "audio/jesus-on-es.mp3": {
+      "bytes": 3573687,
+      "sha256": "9c755b3280978abee94f08ef40908c6370afcef0700fac22c162227d5d6c1d95"
+    },
+    "audio/menu-groove.mp3": {
+      "bytes": 5227111,
+      "sha256": "b8dabce442fb67cf4ca47248d7097efe306c4fdb71daec3760d6a4916cbc0be6"
+    },
+    "audio/metallic-dropouts-2.mp3": {
+      "bytes": 4197518,
+      "sha256": "05d37e281bc013bfd7aa860d3dfe55da3237b2a7d7fa8c2a94be8bdeefe0aa19"
+    },
+    "audio/metallic-dropouts-3.mp3": {
+      "bytes": 4059758,
+      "sha256": "4e7387824f45cd0ff2e6e0fc7ff9ff014ed29cec81a889afd0d42e5bc4b824d4"
+    },
+    "audio/metallic-dropouts.mp3": {
+      "bytes": 4344590,
+      "sha256": "80c8eb1361d5a5d59643fbcfa97826fc0300ed56252c6bafa1288e29247c2bef"
+    },
+    "audio/neon-undertow.mp3": {
+      "bytes": 4654078,
+      "sha256": "e838ba49fbca0dece1bf284c73bfb90c1196d0300527fd8741a816a7dd6b1879"
+    },
+    "audio/overclock-anthem.mp3": {
+      "bytes": 3999555,
+      "sha256": "469c2216588b93db6a17c8d90ff13b6cfc4f9084c41cf70c567e616bfa441810"
+    },
+    "audio/photo-finish.mp3": {
+      "bytes": 4138269,
+      "sha256": "de4dda7a8623981487b04bed0b272b69896c0c6a54e08a8ce7a2ca054b49ff78"
+    },
+    "audio/raw-club-mix.mp3": {
+      "bytes": 4177296,
+      "sha256": "9c12f19ee9fb2f08881a95581c2e4a68d41d20473d53d2f10868d83b3f6a8513"
+    },
+    "audio/vector-race.mp3": {
+      "bytes": 4501345,
+      "sha256": "8624d59d35535a9225d957d57ae9744f5882e6174947c772954a0895e7ea353f"
+    },
+    "audio/velocity-bloom.mp3": {
+      "bytes": 4652638,
+      "sha256": "f69abb9dc93e2987f80ae6f0d3fdd059b2106b4fda6b64152a28db8a3db9e574"
+    },
+    "embed": {
+      "bytes": 1776,
+      "sha256": "7e23f21cf0159aa3d65405daa08d42a418a91564c6532000b6b28626c1db4f6b",
+      "dynamic": true
+    },
+    "embed.css": {
+      "bytes": 9831,
+      "sha256": "ab8c6ec5254b739d6b9270dbc3a79aacbcf56a5f353c2885ce5e870daf35d915"
+    },
+    "embed.js": {
+      "bytes": 732728,
+      "sha256": "0c3bd2aadac43a34b93f7b6b7ada0229f5a14b4dc2b4b3b5d3a49c3801dcee83"
+    },
+    "environment/docklands_02_1k.hdr": {
+      "bytes": 1543169,
+      "sha256": "71e60fb2eaa58f2a0d09a6d36ae1e0a69ac7f2b9a23337bd28864f8473baebb1"
+    },
+    "environment/launch-bay_1k.hdr": {
+      "bytes": 1317842,
+      "sha256": "eed34e1e79511e1e819b90ab92e83bd3f51e24b006debd0ca55419af49ff455a"
+    },
+    "environment/lunar-earth-512.png": {
+      "bytes": 58468,
+      "sha256": "129cbf7a078b38b40bf4d3cfc6f82cf100cc95165a43b1ed61d058f797b7fc37"
+    },
+    "environment/lunar-earth-data-512.png": {
+      "bytes": 102278,
+      "sha256": "56f228982b77c8e986bfc2568c13a87d65281c7799d6a49cc5fc01273c127944"
+    },
+    "environment/lunar-earth-data.png": {
+      "bytes": 345849,
+      "sha256": "3a5bb07ed081d88d1a10b0fa686a70d6d011659d68123c10ee5aa5e7027aeac7"
+    },
+    "environment/lunar-earth.png": {
+      "bytes": 151983,
+      "sha256": "4753e234a3537871de1f20b0fd986a94b3ec3858ac0c89a8cad7012ceffa1890"
+    },
+    "environment/lunar-milky-way-512.png": {
+      "bytes": 48700,
+      "sha256": "856ec12486786cf1adf8bc4c8eb82c1ff1b9b825ca54b7852f3f874b72c05f5d"
+    },
+    "environment/lunar-milky-way.png": {
+      "bytes": 439595,
+      "sha256": "14d9603afde78910f0e086dbe23b526102334a2081a8cd1aea649f4f5c6a3d5d"
+    },
+    "environment/regolith-detail-256.png": {
+      "bytes": 135747,
+      "sha256": "2b9e9de08b22e50236c6b8529978c069770b6af9844c2df64c1274dba5ee2a4c"
+    },
+    "environment/regolith-detail.png": {
+      "bytes": 545174,
+      "sha256": "6be2f7362d73c44beadd031d7996607fa3c3d4441b9a4d87cf0485a82182aeb6"
+    },
+    "environment/shanghai_bund_1k.hdr": {
+      "bytes": 1640377,
+      "sha256": "77276a6b67cbf09611efc46e55871eead34e1fc6fa107db412207b91cf74697e"
+    },
+    "favicon.svg": {
+      "bytes": 234,
+      "sha256": "cbd4ce1f7f4a6e8a477a56b0100cf89b86864bdac16619c164d12b7c64767b2e"
+    },
+    "index.html": {
+      "bytes": 646,
+      "sha256": "0b9fc473bcef0ef381e611f05c7fc7e2fc0bf13a439a7eaab8916129f3ed45b9"
+    },
+    "models/awards.glb": {
+      "bytes": 2187056,
+      "sha256": "c55ab5f4d274d11b1f12b8c54c97e9889c422673cbe89fa1ccf152d42a449566"
+    },
+    "models/kestrel-player.glb": {
+      "bytes": 4304376,
+      "sha256": "358c15ea37e742d16a879cd79ea58b6c3dcd565e77414d7f9ddfffca432307c8"
+    },
+    "models/kestrel-wavedash-player.glb": {
+      "bytes": 5166012,
+      "sha256": "015fdacb57a0fcf3dd73908f07f9b5615e861101afabff206c7924eadc0ac3cc"
+    },
+    "models/launch-bay.glb": {
+      "bytes": 1666432,
+      "sha256": "10df3ff65343c4a18fc8706dfd6b1d91407b466456033737f92bcec79f6c2524"
+    },
+    "models/manta-claude-player.glb": {
+      "bytes": 3870492,
+      "sha256": "f143c571881891eef23e96a939714385b509e1517b22fdd14c2cc8262b6f0ca1"
+    },
+    "models/manta-player.glb": {
+      "bytes": 3978712,
+      "sha256": "e59482b68d09b9790da1da44e7f332bff7e33b7a39ce57145eb619a5a32cd0c8"
+    },
+    "models/meridian-flying-kit.glb": {
+      "bytes": 1791668,
+      "sha256": "9ce3c0a744fff40dd431dc238de648074a146d261034969aba1c88636ca68a91"
+    },
+    "models/meridian-hotel-kit.glb": {
+      "bytes": 3150104,
+      "sha256": "3d06ff544c7843dec728ba5d672db9311e09acd8415ce410b43945cf4e0b21e3"
+    },
+    "models/meridian-materials.glb": {
+      "bytes": 3777248,
+      "sha256": "ab46482f93bc2fa7b5e360b6ef67df0e194292ef565a0e7e248011c83ac8ae6f"
+    },
+    "models/meridian-skyline-kit.glb": {
+      "bytes": 1671360,
+      "sha256": "fc9ae75ad9368a17a29eb5a63a8c8c2eba7d0e302f782a49ce8cffc2dc5fdece"
+    },
+    "models/meridian-street-kit.glb": {
+      "bytes": 1058072,
+      "sha256": "cc4a7463127910213777a88b335823d7b1397dd54ccd7ae2f9563b78f8760862"
+    },
+    "models/meridian-transit-kit.glb": {
+      "bytes": 1264472,
+      "sha256": "7174a89fb3e6adc8d08163f807dad53136db18e75064473a3bc4296a1e3efd48"
+    },
+    "models/meridian-venue-kit.glb": {
+      "bytes": 1878764,
+      "sha256": "d580846a97622b82c39bf10a1e14502433f3e599b0da80a74827c3cf4457e1da"
+    },
+    "models/monarch-player.glb": {
+      "bytes": 4031532,
+      "sha256": "8415803a263e7dc676812645c26cea63a1b65acb715e616949ad0a9c322150ae"
+    },
+    "models/nocturne-city-kit.glb": {
+      "bytes": 7322844,
+      "sha256": "168986f3acb330ff9cf91b0467cbbaa4de846ec1fff31af5d6b1188bfa90659f"
+    },
+    "models/port-life.glb": {
+      "bytes": 253092,
+      "sha256": "c9816d49c4ec7cd8deb1ec7235ae87699894f18066906d6a893a1edd2582fb2e"
+    },
+    "models/previews/kestrel-wavedash.jpg": {
+      "bytes": 31459,
+      "sha256": "13d11cf3b23d57d56cbf83c849d16d4edf616051520446dbde7a10f5450b9e9a"
+    },
+    "models/previews/kestrel.jpg": {
+      "bytes": 32223,
+      "sha256": "986d2f676e9e8a8f3a75bc113c07da9238f377b1bedf9b786e6441c01753b623"
+    },
+    "models/previews/manta-claude.jpg": {
+      "bytes": 27627,
+      "sha256": "fbab50e413ca1d9f742cc6ebb03f6dd9ab7fded0bb7ab7eae16a3d314ed6d370"
+    },
+    "models/previews/manta.jpg": {
+      "bytes": 27196,
+      "sha256": "18b73f95f53a6bdb028c550fa3d1bdc5d5470f2d261630dc1ba643403beffb27"
+    },
+    "models/previews/monarch.jpg": {
+      "bytes": 33366,
+      "sha256": "b96aead9bbac3ed941db835986266f54926943a90ad1915be9acae07ae58a78a"
+    },
+    "models/previews/talon.jpg": {
+      "bytes": 26888,
+      "sha256": "e72e6d449fd6c508ed6630851a7e222a927679e3ff9f170adde0f5efb2e3597b"
+    },
+    "models/previews/vesper.jpg": {
+      "bytes": 26630,
+      "sha256": "f87f77705ee2daee0e3af3a5b43ed95d5c1288401d4239373bcf34112113bf3c"
+    },
+    "models/shackleton-base-kit.glb": {
+      "bytes": 7799900,
+      "sha256": "1b1a6e210874f3fe43e968712c0e88160c6812c6d6f77771237ee14d2b1c1086"
+    },
+    "models/sirocco-oasis-kit.glb": {
+      "bytes": 6458992,
+      "sha256": "265d54972dd67b6c7d93fef8dca17b8bc8b640e6579b7dfecd9a58fc642e370f"
+    },
+    "models/solstice-port-kit.glb": {
+      "bytes": 3474040,
+      "sha256": "0a1772ea66d7439c537db83fd8e32be690d8c28d5276fd3722898bd07d5f682c"
+    },
+    "models/talon-player.glb": {
+      "bytes": 3919928,
+      "sha256": "80197bf041749ca82996f71be4514e9aefb1047305d98a5e8c5ae21f631b2f91"
+    },
+    "models/vesper-player.glb": {
+      "bytes": 4028336,
+      "sha256": "259cda1e21f1d6de5809f81c8832baba1a6bc680e465c5b8884e12b845c6b614"
+    },
+    "models/weapons/cannon.glb": {
+      "bytes": 1322376,
+      "sha256": "0b04226e51e2f9ec6ad7742e974840266f942be0c31a1f05a9a94a0f7a51e92c"
+    },
+    "models/weapons/mines.glb": {
+      "bytes": 1958772,
+      "sha256": "17a865dc00c9922aff1157f91bed44563c37f1fc43e0b9c1d1633729d7301b3e"
+    },
+    "models/weapons/missile.glb": {
+      "bytes": 1898020,
+      "sha256": "d98aa32e6f68689bdbe2d04e3eda3617123458f254e921b54cfcebca584481b3"
+    },
+    "models/weapons/rockets.glb": {
+      "bytes": 1905368,
+      "sha256": "598654956b5dc0e9debb4c2c48cbc208a32d73938543ce7cd91e8f2cb71ce96e"
+    },
+    "sw-embed.js": {
+      "bytes": 30200,
+      "sha256": "c1eccb55a9af77957b44cbf49b0f68bff6fcacdb2de617ec9a85b33237121698"
+    },
+    "ui/awards/medal-bronze.webp": {
+      "bytes": 10862,
+      "sha256": "8e8e06ab020afa4e8bf5919eb3c438b57857a51eb4e61c1e8b1a9b49b21e76dc"
+    },
+    "ui/awards/medal-gold.webp": {
+      "bytes": 10794,
+      "sha256": "0dd1d4067c9909f6026486605abe49dda882e4d1a5339908c50505f0125df9c2"
+    },
+    "ui/awards/medal-silver.webp": {
+      "bytes": 9818,
+      "sha256": "00e958d8b64b4ee0a20fd575a04a85f251c87fc96755e96cfd35fdb14995a46d"
+    },
+    "ui/awards/trophy-bronze.webp": {
+      "bytes": 14918,
+      "sha256": "233dcdb3c895584b01111d2a710950e64bbebb0f80423008c5698e1d842847e4"
+    },
+    "ui/awards/trophy-gold.webp": {
+      "bytes": 15442,
+      "sha256": "7e9823eee7b35c3df3171113719ae9f5c2e3110a10d3fb550a9b50e20f968872"
+    },
+    "ui/awards/trophy-silver.webp": {
+      "bytes": 14808,
+      "sha256": "d58d7f875f3cec12285faa4f3bb716bf27a77ff8de7f70b3538016e1f9587960"
+    }
+  }
+}
