@@ -1,0 +1,17 @@
+{
+  "note": "inline <script>/<style> byte ranges + sha256 inside the captured documents",
+  "blocks": [
+    {
+      "file": "readable/embed-inline-1.pretty.js",
+      "source": "embed",
+      "kind": "script",
+      "block": 1,
+      "byteStart": 201,
+      "byteEnd": 1363,
+      "captureBytes": 1162,
+      "captureSha256": "903b15b87353648c902f142e00095df1578d167d7a57a7e60f0e56af068455fa",
+      "prettyBytes": 1180,
+      "prettySha256": "294fd376d64aa2fe030825f736c7593522563c4612615bbc40230946d09b9f5b"
+    }
+  ]
+}

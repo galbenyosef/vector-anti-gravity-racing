@@ -1,0 +1,2119 @@
+{
+  "project": "vector-anti-gravity-racing",
+  "kind": "statement-aligned-slices",
+  "defaultFile": "src/assets__audio-preparation.worker-CEAJS9BC-01.js",
+  "importWhitelist": [],
+  "note": "VECTOR: ANTI-GRAVITY RACING (https://wavedash.com/games/vector-anti-gravity-racing) is capture-class: a WebGPU anti-gravity racer on the Wavedash platform, served by a per-build CDN host (mx70fsjxynf8mke9yqthamtfcx8dtssc-<user-hash>-<build-hash>.builds.wavedashcdn.com) behind a platform session (playKey → embed → gameplay JWT). §0.4 fork-over-mirror was checked on 2026-10-13 — the project publishes no source repository, so the mirror stands. The build is a Vite production bundle: index.html loads the entry chunk assets/index-DphGw8Ou.js (React runtime + React-Aria UI vendors, the app's music/track/ship tables, the bundled three.js WebGPU+TSL engine, the app UI), which pulls game-CsnOSIff.js (race simulation), player-Cd-Kznkt.js (intro/garage), renderer-setup--EktvnNe.js and award-scene-D9Dc5ufv.js (scenery), the vendored three.js loaders HDRLoader-C77IBAVq.js, the app's audio-preparation.worker-CEAJS9BC.js and the Wavedash SDK client shim client-BtP_tmtQ.js. Derived pipeline: capture → pinned prettier 3.9.6 (module API, default options, applied until a fixed point — the entry chunk needs 2 passes, everything else 1; the recorded pass count is replayed by the audit — never the CLI: it respects .gitignore and can silently echo its input) → readable/<tag>.pretty.js|css per captured JS/CSS file (repo-root-relative, dirs flattened with __; every pretty provably NOT byte-identical to its capture source) → statement-aligned slices src/<tag>-NN.js of the app-side JS at top-level declaration boundaries, ~250-350 line windows (oversized single declarations stay whole) with an exact 2-line provenance header. Every slice parses standalone under `node --input-type=module --check -` and round-trips byte-exact to its recorded readable line range. Vendor rule — wholeFile sections/regions, never sliced: embed.js (the Wavedash platform SDK), sw-embed.js (its embed service worker), assets/HDRLoader-C77IBAVq.js (the vendored three.js HDR loader chunk) and assets/client-BtP_tmtQ.js (the SDK client shim) are third-party runtime; inside the entry chunk two content-anchored wholeFile regions are asserted by guards — the React/React-Aria UI runtime head and the bundled three.js WebGPU+TSL engine region (ending at the app's track-spline builder). The scenery chunks carry bundler-merged three.js/TSL utility code interleaved with app code at minified module boundaries; those files are sliced statement-aligned and their slices are NOT claimed as clean app code — recorded honestly. Machinery/stylesheet rule — assets/index-J7X__Wjw.css and embed.css are wholeFile. Non-standalone parts are skipped sections: each chunk's final pure export {…} table. Payload rule (engine-build precedent): every file under models/, environment/, audio/, ui/ and the fonts are recorded in notRendered with size + sha256 — never prettified, re-encoded or otherwise rewritten. Backend paths fetched at runtime — /vector/preferences-v1.json and /vector/progress-v1.json (Wavedash userfs cloud saves), /auth/token and /auth/refresh (session rotation) — are platform endpoints, not static assets, and are recorded as gaps in _mirror-report.json. Identifiers in src/ are the bundle's own minified names — the identifier-rename campaign (PLAN §5) is recorded as an open task in README.md, not claimed here. Capture bytes are untouched by everything above; re-cut with `node tools/derive.mjs` after any capture refresh. `node tools/audit.js` is the gate.",
+  "renderOptions": {
+    "_default": "prettier 3.9.6, module API, default options, formatted to a fixed point (per-file pass count recorded in sources[].prettyPasses; the entry chunk converges on pass 2) — never the CLI: it respects .gitignore and can silently echo its input",
+    "js": "parser babel, no plugins",
+    "css": "parser css, no plugins"
+  },
+  "source": "readable/: 11 JS pretties (6 app chunk/worker file(s) sliced, 1 with content-anchored wholeFile regions, 4 vendor wholeFile) + 2 CSS pretties + 1 inline twin(s); src/: 157 statement-aligned slices across 6 file(s); 5 skipped section(s); 8 wholeFile section(s); capture: 86 files under .upstream/manifest.json (72 payload(s) notRendered); inline scan: embed, index.html (1 inline content block(s)).",
+  "inline": {
+    "scanned": [
+      "embed",
+      "index.html"
+    ],
+    "contentBlocks": 1,
+    "notRendered": 0,
+    "note": "index.html references external chunks only (no inline content); the extensionless `embed` document carries the __WAVEDASH_GAME__ config script (gcid/gbid/swPath/gameplayJwt/sessionToken), twin-pretty'd and sliced like app JS."
+  },
+  "sources": [
+    {
+      "sourceFile": "readable/assets__audio-preparation.worker-CEAJS9BC.pretty.js",
+      "capture": "assets/audio-preparation.worker-CEAJS9BC.js",
+      "captureKind": "file",
+      "captureSha256": "5d88765cbc6e5f36a9100a0f89198c77defd5aaac100dd351a2195ee35c62057",
+      "captureBytes": 4455,
+      "prettyLines": 238,
+      "prettyBytes": 7789,
+      "prettyPasses": 1,
+      "idempotent": true,
+      "tag": "assets__audio-preparation.worker-CEAJS9BC",
+      "slices": 1,
+      "derived": "readable + 1 statement-aligned slice(s)"
+    },
+    {
+      "sourceFile": "readable/assets__award-scene-D9Dc5ufv.pretty.js",
+      "capture": "assets/award-scene-D9Dc5ufv.js",
+      "captureKind": "file",
+      "captureSha256": "1bfaee4f48d1a96fa673b7ad9038ee5648f81e5a2aba7b930936b5e43c09acd7",
+      "captureBytes": 3841,
+      "prettyLines": 215,
+      "prettyBytes": 5758,
+      "prettyPasses": 1,
+      "idempotent": true,
+      "tag": "assets__award-scene-D9Dc5ufv",
+      "slices": 1,
+      "derived": "readable + 1 statement-aligned slice(s) + 1 skipped section(s)"
+    },
+    {
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js",
+      "capture": "assets/game-CsnOSIff.js",
+      "captureKind": "file",
+      "captureSha256": "3b0330327be03ce22dee9e9dabf1a51ce7320bf2d1321cbd60a3c770f170ac4e",
+      "captureBytes": 871481,
+      "prettyLines": 43359,
+      "prettyBytes": 1354187,
+      "prettyPasses": 1,
+      "idempotent": true,
+      "tag": "assets__game-CsnOSIff",
+      "slices": 99,
+      "derived": "readable + 99 statement-aligned slice(s) + 1 skipped section(s)"
+    },
+    {
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js",
+      "capture": "assets/index-DphGw8Ou.js",
+      "captureKind": "file",
+      "captureSha256": "0b3fea955da62724d7747788bc14130b9353482a14fc1c6d42a2f195a7f813d0",
+      "captureBytes": 1577466,
+      "prettyLines": 85047,
+      "prettyBytes": 2583875,
+      "prettyPasses": 2,
+      "idempotent": true,
+      "tag": "assets__index-DphGw8Ou",
+      "slices": 46,
+      "derived": "readable + 46 statement-aligned slice(s) + 2 wholeFile region(s) + 1 skipped section(s)"
+    },
+    {
+      "sourceFile": "readable/assets__player-Cd-Kznkt.pretty.js",
+      "capture": "assets/player-Cd-Kznkt.js",
+      "captureKind": "file",
+      "captureSha256": "dcaffd595783df3f11782b7458d225fc313d3930e2bc0c0fde25c85e08a4804f",
+      "captureBytes": 81248,
+      "prettyLines": 3549,
+      "prettyBytes": 116053,
+      "prettyPasses": 2,
+      "idempotent": true,
+      "tag": "assets__player-Cd-Kznkt",
+      "slices": 7,
+      "derived": "readable + 7 statement-aligned slice(s) + 1 skipped section(s)"
+    },
+    {
+      "sourceFile": "readable/assets__renderer-setup--EktvnNe.pretty.js",
+      "capture": "assets/renderer-setup--EktvnNe.js",
+      "captureKind": "file",
+      "captureSha256": "80a56d1113cfb18613b073088d163e05b3ae0ea90a1b0b33d7f3a19cca545016",
+      "captureBytes": 18038,
+      "prettyLines": 1095,
+      "prettyBytes": 23095,
+      "prettyPasses": 1,
+      "idempotent": true,
+      "tag": "assets__renderer-setup--EktvnNe",
+      "slices": 3,
+      "derived": "readable + 3 statement-aligned slice(s) + 1 skipped section(s)"
+    },
+    {
+      "sourceFile": "readable/assets__HDRLoader-C77IBAVq.pretty.js",
+      "capture": "assets/HDRLoader-C77IBAVq.js",
+      "captureKind": "file",
+      "captureSha256": "7b211936ab761c7a2c9c5f2c9dbfb7ffcf0977d8b7d9a63de68889caba045480",
+      "captureBytes": 395149,
+      "prettyLines": 16651,
+      "prettyBytes": 535197,
+      "prettyPasses": 1,
+      "idempotent": true,
+      "tag": "assets__HDRLoader-C77IBAVq",
+      "slices": 0,
+      "derived": "readable only (vendor bundle, wholeFile)",
+      "what": "three.js HDR loaders"
+    },
+    {
+      "sourceFile": "readable/assets__client-BtP_tmtQ.pretty.js",
+      "capture": "assets/client-BtP_tmtQ.js",
+      "captureKind": "file",
+      "captureSha256": "c01401cb39e0dcbab94ca8f6a4dffb9e7aac3411543c4de361dfe2cd0f508464",
+      "captureBytes": 206,
+      "prettyLines": 7,
+      "prettyBytes": 230,
+      "prettyPasses": 1,
+      "idempotent": true,
+      "tag": "assets__client-BtP_tmtQ",
+      "slices": 0,
+      "derived": "readable only (vendor bundle, wholeFile)",
+      "what": "Wavedash SDK client shim"
+    },
+    {
+      "sourceFile": "readable/embed.pretty.js",
+      "capture": "embed.js",
+      "captureKind": "file",
+      "captureSha256": "0c3bd2aadac43a34b93f7b6b7ada0229f5a14b4dc2b4b3b5d3a49c3801dcee83",
+      "captureBytes": 732728,
+      "prettyLines": 23054,
+      "prettyBytes": 751778,
+      "prettyPasses": 1,
+      "idempotent": true,
+      "tag": "embed",
+      "slices": 0,
+      "derived": "readable only (vendor bundle, wholeFile)",
+      "what": "Wavedash platform SDK"
+    },
+    {
+      "sourceFile": "readable/sw-embed.pretty.js",
+      "capture": "sw-embed.js",
+      "captureKind": "file",
+      "captureSha256": "c1eccb55a9af77957b44cbf49b0f68bff6fcacdb2de617ec9a85b33237121698",
+      "captureBytes": 30200,
+      "prettyLines": 1828,
+      "prettyBytes": 56753,
+      "prettyPasses": 1,
+      "idempotent": true,
+      "tag": "sw-embed",
+      "slices": 0,
+      "derived": "readable only (vendor bundle, wholeFile)",
+      "what": "Wavedash embed service worker"
+    },
+    {
+      "sourceFile": "readable/assets__index-J7X__Wjw.pretty.css",
+      "capture": "assets/index-J7X__Wjw.css",
+      "captureKind": "file",
+      "captureSha256": "972b8d4d8e0ef1dcf9818eae66942caea722c8eb0b60c3d366ec65fa7ed2cff6",
+      "captureBytes": 372266,
+      "prettyLines": 18451,
+      "prettyBytes": 451050,
+      "prettyPasses": 2,
+      "idempotent": true,
+      "tag": "assets__index-J7X__Wjw",
+      "slices": 0,
+      "derived": "readable only (stylesheet, wholeFile)"
+    },
+    {
+      "sourceFile": "readable/embed.pretty.css",
+      "capture": "embed.css",
+      "captureKind": "file",
+      "captureSha256": "ab8c6ec5254b739d6b9270dbc3a79aacbcf56a5f353c2885ce5e870daf35d915",
+      "captureBytes": 9831,
+      "prettyLines": 636,
+      "prettyBytes": 10091,
+      "prettyPasses": 1,
+      "idempotent": true,
+      "tag": "embed",
+      "slices": 0,
+      "derived": "readable only (stylesheet, wholeFile)"
+    },
+    {
+      "sourceFile": "readable/embed-inline-1.pretty.js",
+      "capture": "embed",
+      "captureKind": "inline-script",
+      "captureByteStart": 201,
+      "captureByteEnd": 1363,
+      "captureSha256": "903b15b87353648c902f142e00095df1578d167d7a57a7e60f0e56af068455fa",
+      "captureBytes": 1162,
+      "prettyLines": 7,
+      "prettyBytes": 1180,
+      "prettyPasses": 1,
+      "prettySha256": "294fd376d64aa2fe030825f736c7593522563c4612615bbc40230946d09b9f5b",
+      "tag": "embed-inline-1",
+      "slices": 0,
+      "derived": "readable only (inline block, wholeFile)"
+    }
+  ],
+  "sections": [
+    {
+      "file": "assets__audio-preparation.worker-CEAJS9BC-01.js",
+      "title": "assets__audio-preparation.worker-CEAJS9BC 01 — math",
+      "desc": "Lines 1-238. Markers: math(54), exp(12).",
+      "startLine": 1,
+      "endLine": 238,
+      "sourceFile": "readable/assets__audio-preparation.worker-CEAJS9BC.pretty.js"
+    },
+    {
+      "file": "assets__award-scene-D9Dc5ufv-01.js",
+      "title": "assets__award-scene-D9Dc5ufv 01 — math",
+      "desc": "Lines 1-214. Markers: math(9), dispose(8).",
+      "startLine": 1,
+      "endLine": 214,
+      "sourceFile": "readable/assets__award-scene-D9Dc5ufv.pretty.js"
+    },
+    {
+      "file": "assets__award-scene-D9Dc5ufv-tail-export.js",
+      "skipped": true,
+      "title": "assets__award-scene-D9Dc5ufv — final export table (not sliced)",
+      "desc": "Lines 215-215. The chunk's final export {…} table — the exported bindings live in the earlier slices; a standalone tail carries no new statements, so it is indexed only.",
+      "startLine": 215,
+      "endLine": 215,
+      "sourceFile": "readable/assets__award-scene-D9Dc5ufv.pretty.js",
+      "firstLine": "export { C as mountAward };",
+      "lastLine": "export { C as mountAward };"
+    },
+    {
+      "file": "assets__game-CsnOSIff-01.js",
+      "title": "assets__game-CsnOSIff 01 — imul",
+      "desc": "Lines 1-333. Markers: imul(2), math(2).",
+      "startLine": 1,
+      "endLine": 333,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-02.js",
+      "title": "assets__game-CsnOSIff 02 — mul",
+      "desc": "Lines 334-549. Markers: mul(26), math(15).",
+      "startLine": 334,
+      "endLine": 549,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-03.js",
+      "title": "assets__game-CsnOSIff 03 — note",
+      "desc": "Lines 550-893. Markers: note(43), metalness(37).",
+      "startLine": 550,
+      "endLine": 893,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-04.js",
+      "title": "assets__game-CsnOSIff 04 — add",
+      "desc": "Lines 894-1093. Markers: add(13), height(8).",
+      "startLine": 894,
+      "endLine": 1093,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-05.js",
+      "title": "assets__game-CsnOSIff 05 — kind",
+      "desc": "Oversized single declaration (kept whole). Lines 1094-1542. Markers: kind(32), age(20).",
+      "startLine": 1094,
+      "endLine": 1542,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-06.js",
+      "title": "assets__game-CsnOSIff 06 — mul",
+      "desc": "Lines 1543-1771. Markers: mul(10), add(9).",
+      "startLine": 1543,
+      "endLine": 1771,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-07.js",
+      "title": "assets__game-CsnOSIff 07 — position",
+      "desc": "Oversized single declaration (kept whole). Lines 1772-2455. Markers: position(31), math(28).",
+      "startLine": 1772,
+      "endLine": 2455,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-08.js",
+      "title": "assets__game-CsnOSIff 08 — intensity",
+      "desc": "Lines 2456-2805. Markers: intensity(25), sun(20).",
+      "startLine": 2456,
+      "endLine": 2805,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-09.js",
+      "title": "assets__game-CsnOSIff 09 — math",
+      "desc": "Lines 2806-2985. Markers: math(23), radius(6).",
+      "startLine": 2806,
+      "endLine": 2985,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-10.js",
+      "title": "assets__game-CsnOSIff 10 — add",
+      "desc": "Lines 2986-3319. Markers: add(42), mul(34).",
+      "startLine": 2986,
+      "endLine": 3319,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-11.js",
+      "title": "assets__game-CsnOSIff 11 — distance",
+      "desc": "Lines 3320-3483. Markers: distance(20), lane(18).",
+      "startLine": 3320,
+      "endLine": 3483,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-12.js",
+      "title": "assets__game-CsnOSIff 12 — math",
+      "desc": "Lines 3484-3826. Markers: math(38), distance(23).",
+      "startLine": 3484,
+      "endLine": 3826,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-13.js",
+      "title": "assets__game-CsnOSIff 13 — mul",
+      "desc": "Lines 3827-4104. Markers: mul(44), add(20).",
+      "startLine": 3827,
+      "endLine": 4104,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-14.js",
+      "title": "assets__game-CsnOSIff 14 — math",
+      "desc": "Lines 4105-4444. Markers: math(21), map(16).",
+      "startLine": 4105,
+      "endLine": 4444,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-15.js",
+      "title": "assets__game-CsnOSIff 15 — math",
+      "desc": "Lines 4445-4769. Markers: math(24), max(10).",
+      "startLine": 4445,
+      "endLine": 4769,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-16.js",
+      "title": "assets__game-CsnOSIff 16 — math",
+      "desc": "Lines 4770-5020. Markers: math(47), max(10).",
+      "startLine": 4770,
+      "endLine": 5020,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-17.js",
+      "title": "assets__game-CsnOSIff 17 — mul",
+      "desc": "Oversized single declaration (kept whole). Lines 5021-5382. Markers: mul(59), add(22).",
+      "startLine": 5021,
+      "endLine": 5382,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-18.js",
+      "title": "assets__game-CsnOSIff 18 — math",
+      "desc": "Lines 5383-5455. Markers: math(12), height(5).",
+      "startLine": 5383,
+      "endLine": 5455,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-19.js",
+      "title": "assets__game-CsnOSIff 19 — mul",
+      "desc": "Oversized single declaration (kept whole). Lines 5456-5894. Markers: mul(31), math(16).",
+      "startLine": 5456,
+      "endLine": 5894,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-20.js",
+      "title": "assets__game-CsnOSIff 20 — math",
+      "desc": "Lines 5895-6196. Markers: math(41), margin(23).",
+      "startLine": 5895,
+      "endLine": 6196,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-21.js",
+      "title": "assets__game-CsnOSIff 21 — mul",
+      "desc": "Lines 6197-6528. Markers: mul(17), add(11).",
+      "startLine": 6197,
+      "endLine": 6528,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-22.js",
+      "title": "assets__game-CsnOSIff 22 — math",
+      "desc": "Lines 6529-6634. Markers: math(9), clone(6).",
+      "startLine": 6529,
+      "endLine": 6634,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-23.js",
+      "title": "assets__game-CsnOSIff 23 — mul",
+      "desc": "Lines 6635-6983. Markers: mul(90), add(44).",
+      "startLine": 6635,
+      "endLine": 6983,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-24.js",
+      "title": "assets__game-CsnOSIff 24 — mul",
+      "desc": "Lines 6984-7330. Markers: mul(33), math(20).",
+      "startLine": 6984,
+      "endLine": 7330,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-25.js",
+      "title": "assets__game-CsnOSIff 25 — math",
+      "desc": "Lines 7331-7673. Markers: math(85), max(32).",
+      "startLine": 7331,
+      "endLine": 7673,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-26.js",
+      "title": "assets__game-CsnOSIff 26 — math",
+      "desc": "Lines 7674-8007. Markers: math(27), push(11).",
+      "startLine": 7674,
+      "endLine": 8007,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-27.js",
+      "title": "assets__game-CsnOSIff 27 — count",
+      "desc": "Lines 8008-8074. Markers: count(2), massdriver(2).",
+      "startLine": 8008,
+      "endLine": 8074,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-28.js",
+      "title": "assets__game-CsnOSIff 28 — mul",
+      "desc": "Lines 8075-8387. Markers: mul(16), add(11).",
+      "startLine": 8075,
+      "endLine": 8387,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-29.js",
+      "title": "assets__game-CsnOSIff 29 — math",
+      "desc": "Lines 8388-8699. Markers: math(41), min(10).",
+      "startLine": 8388,
+      "endLine": 8699,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-30.js",
+      "title": "assets__game-CsnOSIff 30 — pods",
+      "desc": "Lines 8700-8946. Markers: pods(13), position(13).",
+      "startLine": 8700,
+      "endLine": 8946,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-31.js",
+      "title": "assets__game-CsnOSIff 31 — math",
+      "desc": "Lines 8947-9290. Markers: math(57), hypot(12).",
+      "startLine": 8947,
+      "endLine": 9290,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-32.js",
+      "title": "assets__game-CsnOSIff 32 — centre",
+      "desc": "Lines 9291-9633. Markers: centre(49), kind(25).",
+      "startLine": 9291,
+      "endLine": 9633,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-33.js",
+      "title": "assets__game-CsnOSIff 33 — math",
+      "desc": "Lines 9634-9821. Markers: math(32), push(12).",
+      "startLine": 9634,
+      "endLine": 9821,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-34.js",
+      "title": "assets__game-CsnOSIff 34 — straight",
+      "desc": "Oversized single declaration (kept whole). Lines 9822-10181. Markers: straight(19), radius(16).",
+      "startLine": 9822,
+      "endLine": 10181,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-35.js",
+      "title": "assets__game-CsnOSIff 35 — path",
+      "desc": "Lines 10182-10519. Markers: path(22), math(19).",
+      "startLine": 10182,
+      "endLine": 10519,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-36.js",
+      "title": "assets__game-CsnOSIff 36 — math",
+      "desc": "Lines 10520-10554. Markers: math(7), speed(6).",
+      "startLine": 10520,
+      "endLine": 10554,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-37.js",
+      "title": "assets__game-CsnOSIff 37 — front",
+      "desc": "Oversized single declaration (kept whole). Lines 10555-11507. Markers: front(28), max(28).",
+      "startLine": 10555,
+      "endLine": 11507,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-38.js",
+      "title": "assets__game-CsnOSIff 38 — math",
+      "desc": "Lines 11508-11776. Markers: math(12), push(9).",
+      "startLine": 11508,
+      "endLine": 11776,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-39.js",
+      "title": "assets__game-CsnOSIff 39 — math",
+      "desc": "Lines 11777-12042. Markers: math(19), accent(13).",
+      "startLine": 11777,
+      "endLine": 12042,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-40.js",
+      "title": "assets__game-CsnOSIff 40 — math",
+      "desc": "Oversized single declaration (kept whole). Lines 12043-12824. Markers: math(32), clone(16).",
+      "startLine": 12043,
+      "endLine": 12824,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-41.js",
+      "title": "assets__game-CsnOSIff 41 — math",
+      "desc": "Lines 12825-12829. Markers: math(2), cos(1).",
+      "startLine": 12825,
+      "endLine": 12829,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-42.js",
+      "title": "assets__game-CsnOSIff 42 — yaw",
+      "desc": "Oversized single declaration (kept whole). Lines 12830-17275. Markers: yaw(295), height(167).",
+      "startLine": 12830,
+      "endLine": 17275,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-43.js",
+      "title": "assets__game-CsnOSIff 43 — math",
+      "desc": "Lines 17276-17288. Markers: math(2), max(2).",
+      "startLine": 17276,
+      "endLine": 17288,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-44.js",
+      "title": "assets__game-CsnOSIff 44 — max",
+      "desc": "Oversized single declaration (kept whole). Lines 17289-19695. Markers: max(82), min(82).",
+      "startLine": 17289,
+      "endLine": 19695,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-45.js",
+      "title": "assets__game-CsnOSIff 45 — math",
+      "desc": "Lines 19696-20040. Markers: math(62), max(36).",
+      "startLine": 19696,
+      "endLine": 20040,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-46.js",
+      "title": "assets__game-CsnOSIff 46 — math",
+      "desc": "Lines 20041-20255. Markers: math(18), floor(8).",
+      "startLine": 20041,
+      "endLine": 20255,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-47.js",
+      "title": "assets__game-CsnOSIff 47 — math",
+      "desc": "Lines 20256-20560. Markers: math(35), abs(12).",
+      "startLine": 20256,
+      "endLine": 20560,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-48.js",
+      "title": "assets__game-CsnOSIff 48 — math",
+      "desc": "Lines 20561-20724. Markers: math(20), range(8).",
+      "startLine": 20561,
+      "endLine": 20724,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-49.js",
+      "title": "assets__game-CsnOSIff 49 — path",
+      "desc": "Lines 20725-20991. Markers: path(21), role(18).",
+      "startLine": 20725,
+      "endLine": 20991,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-50.js",
+      "title": "assets__game-CsnOSIff 50 — math",
+      "desc": "Lines 20992-21323. Markers: math(25), role(23).",
+      "startLine": 20992,
+      "endLine": 21323,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-51.js",
+      "title": "assets__game-CsnOSIff 51 — math",
+      "desc": "Lines 21324-21487. Markers: math(23), role(13).",
+      "startLine": 21324,
+      "endLine": 21487,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-52.js",
+      "title": "assets__game-CsnOSIff 52 — role",
+      "desc": "Lines 21488-21789. Markers: role(18), math(16).",
+      "startLine": 21488,
+      "endLine": 21789,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-53.js",
+      "title": "assets__game-CsnOSIff 53 — math",
+      "desc": "Lines 21790-22130. Markers: math(17), role(12).",
+      "startLine": 21790,
+      "endLine": 22130,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-54.js",
+      "title": "assets__game-CsnOSIff 54 — math",
+      "desc": "Lines 22131-22458. Markers: math(37), role(20).",
+      "startLine": 22131,
+      "endLine": 22458,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-55.js",
+      "title": "assets__game-CsnOSIff 55 — math",
+      "desc": "Lines 22459-22738. Markers: math(24), push(10).",
+      "startLine": 22459,
+      "endLine": 22738,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-56.js",
+      "title": "assets__game-CsnOSIff 56 — math",
+      "desc": "Lines 22739-23047. Markers: math(32), filter(9).",
+      "startLine": 22739,
+      "endLine": 23047,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-57.js",
+      "title": "assets__game-CsnOSIff 57 — math",
+      "desc": "Lines 23048-23120. Markers: math(11), right(5).",
+      "startLine": 23048,
+      "endLine": 23120,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-58.js",
+      "title": "assets__game-CsnOSIff 58 — mul",
+      "desc": "Oversized single declaration (kept whole). Lines 23121-24537. Markers: mul(180), math(127).",
+      "startLine": 23121,
+      "endLine": 24537,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-59.js",
+      "title": "assets__game-CsnOSIff 59 — dispose",
+      "desc": "Lines 24538-24738. Markers: dispose(10), geometry(9).",
+      "startLine": 24538,
+      "endLine": 24738,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-60.js",
+      "title": "assets__game-CsnOSIff 60 — index",
+      "desc": "Oversized single declaration (kept whole). Lines 24739-26465. Markers: index(192), rect(192).",
+      "startLine": 24739,
+      "endLine": 26465,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-61.js",
+      "title": "assets__game-CsnOSIff 61 — math",
+      "desc": "Lines 26466-26737. Markers: math(11), cell(9).",
+      "startLine": 26466,
+      "endLine": 26737,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-62.js",
+      "title": "assets__game-CsnOSIff 62 — mul",
+      "desc": "Oversized single declaration (kept whole). Lines 26738-27883. Markers: mul(185), add(103).",
+      "startLine": 26738,
+      "endLine": 27883,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-63.js",
+      "title": "assets__game-CsnOSIff 63 — mul",
+      "desc": "Lines 27884-28231. Markers: mul(57), add(31).",
+      "startLine": 27884,
+      "endLine": 28231,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-64.js",
+      "title": "assets__game-CsnOSIff 64 — math",
+      "desc": "Lines 28232-28296. Markers: math(11), imul(6).",
+      "startLine": 28232,
+      "endLine": 28296,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-65.js",
+      "title": "assets__game-CsnOSIff 65 — math",
+      "desc": "Oversized single declaration (kept whole). Lines 28297-28649. Markers: math(11), arrays(8).",
+      "startLine": 28297,
+      "endLine": 28649,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-66.js",
+      "title": "assets__game-CsnOSIff 66 — math",
+      "desc": "Lines 28650-28945. Markers: math(14), dir(13).",
+      "startLine": 28650,
+      "endLine": 28945,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-67.js",
+      "title": "assets__game-CsnOSIff 67 — math",
+      "desc": "Oversized single declaration (kept whole). Lines 28946-29439. Markers: math(39), speed(28).",
+      "startLine": 28946,
+      "endLine": 29439,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-68.js",
+      "title": "assets__game-CsnOSIff 68 — math",
+      "desc": "Lines 29440-29782. Markers: math(37), unit(13).",
+      "startLine": 29440,
+      "endLine": 29782,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-69.js",
+      "title": "assets__game-CsnOSIff 69 — math",
+      "desc": "Lines 29783-30074. Markers: math(31), dwell(17).",
+      "startLine": 29783,
+      "endLine": 30074,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-70.js",
+      "title": "assets__game-CsnOSIff 70 — math",
+      "desc": "Lines 30075-30215. Markers: math(14), drops(9).",
+      "startLine": 30075,
+      "endLine": 30215,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-71.js",
+      "title": "assets__game-CsnOSIff 71 — push",
+      "desc": "Oversized single declaration (kept whole). Lines 30216-30624. Markers: push(34), take(33).",
+      "startLine": 30216,
+      "endLine": 30624,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-72.js",
+      "title": "assets__game-CsnOSIff 72 — built",
+      "desc": "Lines 30625-30825. Markers: built(16), info(9).",
+      "startLine": 30625,
+      "endLine": 30825,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-73.js",
+      "title": "assets__game-CsnOSIff 73 — mul",
+      "desc": "Oversized single declaration (kept whole). Lines 30826-31464. Markers: mul(90), add(51).",
+      "startLine": 30826,
+      "endLine": 31464,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-74.js",
+      "title": "assets__game-CsnOSIff 74 — mul",
+      "desc": "Lines 31465-31529. Markers: mul(17), add(4).",
+      "startLine": 31465,
+      "endLine": 31529,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-75.js",
+      "title": "assets__game-CsnOSIff 75 — math",
+      "desc": "Oversized single declaration (kept whole). Lines 31530-31989. Markers: math(28), position(23).",
+      "startLine": 31530,
+      "endLine": 31989,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-76.js",
+      "title": "assets__game-CsnOSIff 76 — math",
+      "desc": "Lines 31990-32078. Markers: math(13), tangent(10).",
+      "startLine": 31990,
+      "endLine": 32078,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-77.js",
+      "title": "assets__game-CsnOSIff 77 — layout",
+      "desc": "Lines 32079-32424. Markers: layout(11), kind(10).",
+      "startLine": 32079,
+      "endLine": 32424,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-78.js",
+      "title": "assets__game-CsnOSIff 78 — mul",
+      "desc": "Lines 32425-32735. Markers: mul(47), sub(20).",
+      "startLine": 32425,
+      "endLine": 32735,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-79.js",
+      "title": "assets__game-CsnOSIff 79 — mul",
+      "desc": "Lines 32736-32989. Markers: mul(41), add(17).",
+      "startLine": 32736,
+      "endLine": 32989,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-80.js",
+      "title": "assets__game-CsnOSIff 80 — height",
+      "desc": "Lines 32990-33309. Markers: height(16), colour(12).",
+      "startLine": 32990,
+      "endLine": 33309,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-81.js",
+      "title": "assets__game-CsnOSIff 81 — orm",
+      "desc": "Lines 33310-33366. Markers: orm(7), mul(6).",
+      "startLine": 33310,
+      "endLine": 33366,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-82.js",
+      "title": "assets__game-CsnOSIff 82 — invsize",
+      "desc": "Oversized single declaration (kept whole). Lines 33367-33806. Markers: invsize(42), tovar(42).",
+      "startLine": 33367,
+      "endLine": 33806,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-83.js",
+      "title": "assets__game-CsnOSIff 83 — intensity",
+      "desc": "Lines 33807-33833. Markers: intensity(3), radius(3).",
+      "startLine": 33807,
+      "endLine": 33833,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-84.js",
+      "title": "assets__game-CsnOSIff 84 — mul",
+      "desc": "Oversized single declaration (kept whole). Lines 33834-34473. Markers: mul(68), tovar(52).",
+      "startLine": 33834,
+      "endLine": 34473,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-85.js",
+      "title": "assets__game-CsnOSIff 85 — postprocessing",
+      "desc": "Lines 34474-34542. Markers: postprocessing(7), quality(7).",
+      "startLine": 34474,
+      "endLine": 34542,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-86.js",
+      "title": "assets__game-CsnOSIff 86 — mul",
+      "desc": "Lines 34543-34864. Markers: mul(17), active(13).",
+      "startLine": 34543,
+      "endLine": 34864,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-87.js",
+      "title": "assets__game-CsnOSIff 87 — visible",
+      "desc": "Oversized single declaration (kept whole). Lines 34865-35463. Markers: visible(23), planar(22).",
+      "startLine": 34865,
+      "endLine": 35463,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-88.js",
+      "title": "assets__game-CsnOSIff 88 — mul",
+      "desc": "Lines 35464-35697. Markers: mul(12), fog_color(9).",
+      "startLine": 35464,
+      "endLine": 35697,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-89.js",
+      "title": "assets__game-CsnOSIff 89 — mul",
+      "desc": "Lines 35698-35851. Markers: mul(12), rotation(7).",
+      "startLine": 35698,
+      "endLine": 35851,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-90.js",
+      "title": "assets__game-CsnOSIff 90 — scene",
+      "desc": "Oversized single declaration (kept whole). Lines 35852-38008. Markers: scene(75), renderer(73).",
+      "startLine": 35852,
+      "endLine": 38008,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-91.js",
+      "title": "assets__game-CsnOSIff 91 — math",
+      "desc": "Lines 38009-38295. Markers: math(52), exp(11).",
+      "startLine": 38009,
+      "endLine": 38295,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-92.js",
+      "title": "assets__game-CsnOSIff 92 — math",
+      "desc": "Lines 38296-38463. Markers: math(13), basshistory(7).",
+      "startLine": 38296,
+      "endLine": 38463,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-93.js",
+      "title": "assets__game-CsnOSIff 93 — music",
+      "desc": "Oversized single declaration (kept whole). Lines 38464-39168. Markers: music(31), connect(29).",
+      "startLine": 38464,
+      "endLine": 39168,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-94.js",
+      "title": "assets__game-CsnOSIff 94 — math",
+      "desc": "Lines 39169-39198. Markers: math(2), every(1).",
+      "startLine": 39169,
+      "endLine": 39198,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-95.js",
+      "title": "assets__game-CsnOSIff 95 — recorder",
+      "desc": "Oversized single declaration (kept whole). Lines 39199-39634. Markers: recorder(27), status(23).",
+      "startLine": 39199,
+      "endLine": 39634,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-96.js",
+      "title": "assets__game-CsnOSIff 96 — cssrules",
+      "desc": "Lines 39635-39922. Markers: cssrules(6), csstext(6).",
+      "startLine": 39635,
+      "endLine": 39922,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-97.js",
+      "title": "assets__game-CsnOSIff 97 — values",
+      "desc": "Oversized single declaration (kept whole). Lines 39923-40636. Markers: values(32), kind(21).",
+      "startLine": 39923,
+      "endLine": 40636,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-98.js",
+      "title": "assets__game-CsnOSIff 98 — math",
+      "desc": "Lines 40637-40944. Markers: math(27), push(21).",
+      "startLine": 40637,
+      "endLine": 40944,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-99.js",
+      "title": "assets__game-CsnOSIff 99 — sim",
+      "desc": "Oversized single declaration (kept whole). Lines 40945-43358. Markers: sim(161), world(90).",
+      "startLine": 40945,
+      "endLine": 43358,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js"
+    },
+    {
+      "file": "assets__game-CsnOSIff-tail-export.js",
+      "skipped": true,
+      "title": "assets__game-CsnOSIff — final export table (not sliced)",
+      "desc": "Lines 43359-43359. The chunk's final export {…} table — the exported bindings live in the earlier slices; a standalone tail carries no new statements, so it is indexed only.",
+      "startLine": 43359,
+      "endLine": 43359,
+      "sourceFile": "readable/assets__game-CsnOSIff.pretty.js",
+      "firstLine": "export { oT as RacerGame };",
+      "lastLine": "export { oT as RacerGame };"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-react-vendor.js",
+      "wholeFile": true,
+      "title": "assets__index-DphGw8Ou — React + React-Aria UI runtime head (vendor region, whole-file, never sliced)",
+      "desc": "Lines 1-21127 of readable/assets__index-DphGw8Ou.pretty.js: the Vite chunk's opening vendor block: the Vite __vite__mapDeps prelude, the React runtime (createElement/forwardRef/jsx-runtime plumbing, devtools hooks, schedulers) and the React-Aria UI component libraries (slider/overlay/icon primitives) the app UI is built from — third-party runtime. Content-anchored: the region ends immediately before the app's music-library table (`audio/dockside-ignition.mp3`). Vendor rule — indexed whole-file in readable/, never sliced.",
+      "note": "whole-file region (vendor rule): indexed in readable/, never sliced",
+      "startLine": 1,
+      "endLine": 21127,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-01.js",
+      "title": "assets__index-DphGw8Ou 01 — artist",
+      "desc": "Lines 21128-21390. Markers: artist(19), title(19).",
+      "startLine": 21128,
+      "endLine": 21390,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-three-vendor.js",
+      "wholeFile": true,
+      "title": "assets__index-DphGw8Ou — bundled three.js WebGPU + TSL engine (vendor region, whole-file, never sliced)",
+      "desc": "Lines 21391-68716 of readable/assets__index-DphGw8Ou.pretty.js: the bundled three.js WebGPU engine (three.webgpu + the TSL node system: math/constants/colour management, textures, geometries, materials, node materials, the WebGPURenderer with its WebGL2 backend fallback, GPU render pipeline/diagnostics, the window.__THREE_DEVTOOLS__ registrations) plus the React scheduler/queueing modules the bundler merged into the same span. The region starts at the app ship-table helper boundary and ends immediately before the app's track-spline builder (`Route spacing`). Vendor rule — indexed whole-file in readable/, never sliced.",
+      "note": "whole-file region (vendor rule): indexed in readable/, never sliced",
+      "startLine": 21391,
+      "endLine": 68716,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-02.js",
+      "title": "assets__index-DphGw8Ou 02 — math",
+      "desc": "Lines 68717-68998. Markers: math(23), error(13).",
+      "startLine": 68717,
+      "endLine": 68998,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-03.js",
+      "title": "assets__index-DphGw8Ou 03 — lapleaderboard",
+      "desc": "Lines 68999-69104. Markers: lapleaderboard(6), leaderboard(6).",
+      "startLine": 68999,
+      "endLine": 69104,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-04.js",
+      "title": "assets__index-DphGw8Ou 04 — rise",
+      "desc": "Oversized single declaration (kept whole). Lines 69105-69548. Markers: rise(110), straight(103).",
+      "startLine": 69105,
+      "endLine": 69548,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-05.js",
+      "title": "assets__index-DphGw8Ou 05 — math",
+      "desc": "Lines 69549-69826. Markers: math(20), lip(14).",
+      "startLine": 69549,
+      "endLine": 69826,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-06.js",
+      "title": "assets__index-DphGw8Ou 06 — distance",
+      "desc": "Oversized single declaration (kept whole). Lines 69827-70261. Markers: distance(34), body(31).",
+      "startLine": 69827,
+      "endLine": 70261,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-07.js",
+      "title": "assets__index-DphGw8Ou 07 — math",
+      "desc": "Lines 70262-70575. Markers: math(33), distance(19).",
+      "startLine": 70262,
+      "endLine": 70575,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-08.js",
+      "title": "assets__index-DphGw8Ou 08 — math",
+      "desc": "Oversized single declaration (kept whole). Lines 70576-71399. Markers: math(123), distance(77).",
+      "startLine": 70576,
+      "endLine": 71399,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-09.js",
+      "title": "assets__index-DphGw8Ou 09 — localstorage",
+      "desc": "Lines 71400-71474. Markers: localstorage(2), add(1).",
+      "startLine": 71400,
+      "endLine": 71474,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-10.js",
+      "title": "assets__index-DphGw8Ou 10 — children",
+      "desc": "Oversized single declaration (kept whole). Lines 71475-72013. Markers: children(91), jsx(59).",
+      "startLine": 71475,
+      "endLine": 72013,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-11.js",
+      "title": "assets__index-DphGw8Ou 11 — children",
+      "desc": "Lines 72014-72313. Markers: children(38), jsx(31).",
+      "startLine": 72014,
+      "endLine": 72313,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-12.js",
+      "title": "assets__index-DphGw8Ou 12 — children",
+      "desc": "Oversized single declaration (kept whole). Lines 72314-72723. Markers: children(60), jsx(47).",
+      "startLine": 72314,
+      "endLine": 72723,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-13.js",
+      "title": "assets__index-DphGw8Ou 13 — quality",
+      "desc": "Lines 72724-73026. Markers: quality(30), resolution(23).",
+      "startLine": 72724,
+      "endLine": 73026,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-14.js",
+      "title": "assets__index-DphGw8Ou 14 — syncedat",
+      "desc": "Lines 73027-73367. Markers: syncedat(20), changedat(19).",
+      "startLine": 73027,
+      "endLine": 73367,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-15.js",
+      "title": "assets__index-DphGw8Ou 15 — medals",
+      "desc": "Lines 73368-73694. Markers: medals(22), map(16).",
+      "startLine": 73368,
+      "endLine": 73694,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-16.js",
+      "title": "assets__index-DphGw8Ou 16 — math",
+      "desc": "Lines 73695-73867. Markers: math(19), pose(11).",
+      "startLine": 73695,
+      "endLine": 73867,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-17.js",
+      "title": "assets__index-DphGw8Ou 17 — math",
+      "desc": "Lines 73868-74216. Markers: math(23), distance(18).",
+      "startLine": 73868,
+      "endLine": 74216,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-18.js",
+      "title": "assets__index-DphGw8Ou 18 — mode",
+      "desc": "Lines 74217-74249. Markers: mode(7), state(6).",
+      "startLine": 74217,
+      "endLine": 74249,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-19.js",
+      "title": "assets__index-DphGw8Ou 19 — session",
+      "desc": "Oversized single declaration (kept whole). Lines 74250-75922. Markers: session(66), lobbyid(64).",
+      "startLine": 74250,
+      "endLine": 75922,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-20.js",
+      "title": "assets__index-DphGw8Ou 20 — children",
+      "desc": "Lines 75923-76071. Markers: children(21), jsx(21).",
+      "startLine": 75923,
+      "endLine": 76071,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-21.js",
+      "title": "assets__index-DphGw8Ou 21 — children",
+      "desc": "Oversized single declaration (kept whole). Lines 76072-76946. Markers: children(105), jsx(93).",
+      "startLine": 76072,
+      "endLine": 76946,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-22.js",
+      "title": "assets__index-DphGw8Ou 22 — children",
+      "desc": "Lines 76947-77279. Markers: children(59), jsx(45).",
+      "startLine": 76947,
+      "endLine": 77279,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-23.js",
+      "title": "assets__index-DphGw8Ou 23 — description",
+      "desc": "Lines 77280-77308. Markers: description(3), title(3).",
+      "startLine": 77280,
+      "endLine": 77308,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-24.js",
+      "title": "assets__index-DphGw8Ou 24 — group",
+      "desc": "Oversized single declaration (kept whole). Lines 77309-77859. Markers: group(31), icon(31).",
+      "startLine": 77309,
+      "endLine": 77859,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-25.js",
+      "title": "assets__index-DphGw8Ou 25 — children",
+      "desc": "Lines 77860-78157. Markers: children(31), jsx(30).",
+      "startLine": 77860,
+      "endLine": 78157,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-26.js",
+      "title": "assets__index-DphGw8Ou 26 — children",
+      "desc": "Oversized single declaration (kept whole). Lines 78158-78511. Markers: children(86), jsx(54).",
+      "startLine": 78158,
+      "endLine": 78511,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-27.js",
+      "title": "assets__index-DphGw8Ou 27 — children",
+      "desc": "Lines 78512-78608. Markers: children(5), classname(5).",
+      "startLine": 78512,
+      "endLine": 78608,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-28.js",
+      "title": "assets__index-DphGw8Ou 28 — children",
+      "desc": "Oversized single declaration (kept whole). Lines 78609-79010. Markers: children(62), jsx(51).",
+      "startLine": 78609,
+      "endLine": 79010,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-29.js",
+      "title": "assets__index-DphGw8Ou 29 — math",
+      "desc": "Lines 79011-79164. Markers: math(28), abs(9).",
+      "startLine": 79011,
+      "endLine": 79164,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-30.js",
+      "title": "assets__index-DphGw8Ou 30 — element",
+      "desc": "Lines 79165-79391. Markers: element(19), math(10).",
+      "startLine": 79165,
+      "endLine": 79391,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-31.js",
+      "title": "assets__index-DphGw8Ou 31 — cursor",
+      "desc": "Oversized single declaration (kept whole). Lines 79392-79806. Markers: cursor(12), holding(12).",
+      "startLine": 79392,
+      "endLine": 79806,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-32.js",
+      "title": "assets__index-DphGw8Ou 32 — resolvescope",
+      "desc": "Lines 79807-79837. Markers: resolvescope(3), addeventlistener(2).",
+      "startLine": 79807,
+      "endLine": 79837,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-33.js",
+      "title": "assets__index-DphGw8Ou 33 — date",
+      "desc": "Oversized single declaration (kept whole). Lines 79838-80423. Markers: date(47), summary(47).",
+      "startLine": 79838,
+      "endLine": 80423,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-34.js",
+      "title": "assets__index-DphGw8Ou 34 — current",
+      "desc": "Lines 80424-80525. Markers: current(10), metal(6).",
+      "startLine": 80424,
+      "endLine": 80525,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-35.js",
+      "title": "assets__index-DphGw8Ou 35 — children",
+      "desc": "Lines 80526-80862. Markers: children(55), jsxs(37).",
+      "startLine": 80526,
+      "endLine": 80862,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-36.js",
+      "title": "assets__index-DphGw8Ou 36 — children",
+      "desc": "Lines 80863-81069. Markers: children(32), jsx(28).",
+      "startLine": 80863,
+      "endLine": 81069,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-37.js",
+      "title": "assets__index-DphGw8Ou 37 — children",
+      "desc": "Lines 81070-81413. Markers: children(56), jsx(38).",
+      "startLine": 81070,
+      "endLine": 81413,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-38.js",
+      "title": "assets__index-DphGw8Ou 38 — children",
+      "desc": "Lines 81414-81637. Markers: children(20), jsx(18).",
+      "startLine": 81414,
+      "endLine": 81637,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-39.js",
+      "title": "assets__index-DphGw8Ou 39 — children",
+      "desc": "Lines 81638-81846. Markers: children(35), jsx(24).",
+      "startLine": 81638,
+      "endLine": 81846,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-40.js",
+      "title": "assets__index-DphGw8Ou 40 — children",
+      "desc": "Oversized single declaration (kept whole). Lines 81847-82333. Markers: children(68), jsx(45).",
+      "startLine": 81847,
+      "endLine": 82333,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-41.js",
+      "title": "assets__index-DphGw8Ou 41 — jsx",
+      "desc": "Lines 82334-82650. Markers: jsx(26), current(25).",
+      "startLine": 82334,
+      "endLine": 82650,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-42.js",
+      "title": "assets__index-DphGw8Ou 42 — jsx",
+      "desc": "Lines 82651-82957. Markers: jsx(30), current(24).",
+      "startLine": 82651,
+      "endLine": 82957,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-43.js",
+      "title": "assets__index-DphGw8Ou 43 — children",
+      "desc": "Lines 82958-83259. Markers: children(32), jsx(28).",
+      "startLine": 82958,
+      "endLine": 83259,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-44.js",
+      "title": "assets__index-DphGw8Ou 44 — current",
+      "desc": "Lines 83260-83572. Markers: current(26), previous(14).",
+      "startLine": 83260,
+      "endLine": 83572,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-45.js",
+      "title": "assets__index-DphGw8Ou 45 — children",
+      "desc": "Oversized single declaration (kept whole). Lines 83573-84711. Markers: children(136), jsx(131).",
+      "startLine": 83573,
+      "endLine": 84711,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-46.js",
+      "title": "assets__index-DphGw8Ou 46 — createroot",
+      "desc": "Lines 84712-84712. Markers: createroot(1), getelementbyid(1).",
+      "startLine": 84712,
+      "endLine": 84712,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js"
+    },
+    {
+      "file": "assets__index-DphGw8Ou-tail-export.js",
+      "skipped": true,
+      "title": "assets__index-DphGw8Ou — final export table (not sliced)",
+      "desc": "Lines 84713-85047. The chunk's final export {…} table — the exported bindings live in the earlier slices; a standalone tail carries no new statements, so it is indexed only.",
+      "startLine": 84713,
+      "endLine": 85047,
+      "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js",
+      "firstLine": "export {",
+      "lastLine": "};"
+    },
+    {
+      "file": "assets__player-Cd-Kznkt-01.js",
+      "title": "assets__player-Cd-Kznkt 01 — assets",
+      "desc": "Lines 1-237. Markers: assets(20), add(8).",
+      "startLine": 1,
+      "endLine": 237,
+      "sourceFile": "readable/assets__player-Cd-Kznkt.pretty.js"
+    },
+    {
+      "file": "assets__player-Cd-Kznkt-02.js",
+      "title": "assets__player-Cd-Kznkt 02 — points",
+      "desc": "Lines 238-521. Markers: points(17), push(14).",
+      "startLine": 238,
+      "endLine": 521,
+      "sourceFile": "readable/assets__player-Cd-Kznkt.pretty.js"
+    },
+    {
+      "file": "assets__player-Cd-Kznkt-03.js",
+      "title": "assets__player-Cd-Kznkt 03 — uniforms",
+      "desc": "Oversized single declaration (kept whole). Lines 522-1211. Markers: uniforms(11), down(10).",
+      "startLine": 522,
+      "endLine": 1211,
+      "sourceFile": "readable/assets__player-Cd-Kznkt.pretty.js"
+    },
+    {
+      "file": "assets__player-Cd-Kznkt-04.js",
+      "title": "assets__player-Cd-Kznkt 04 — mesh",
+      "desc": "Lines 1212-1433. Markers: mesh(11), height(10).",
+      "startLine": 1212,
+      "endLine": 1433,
+      "sourceFile": "readable/assets__player-Cd-Kznkt.pretty.js"
+    },
+    {
+      "file": "assets__player-Cd-Kznkt-05.js",
+      "title": "assets__player-Cd-Kznkt 05 — math",
+      "desc": "Oversized single declaration (kept whole). Lines 1434-3006. Markers: math(74), time(63).",
+      "startLine": 1434,
+      "endLine": 3006,
+      "sourceFile": "readable/assets__player-Cd-Kznkt.pretty.js"
+    },
+    {
+      "file": "assets__player-Cd-Kznkt-06.js",
+      "title": "assets__player-Cd-Kznkt 06 — math",
+      "desc": "Lines 3007-3080. Markers: math(6), addcolorstop(4).",
+      "startLine": 3007,
+      "endLine": 3080,
+      "sourceFile": "readable/assets__player-Cd-Kznkt.pretty.js"
+    },
+    {
+      "file": "assets__player-Cd-Kznkt-07.js",
+      "title": "assets__player-Cd-Kznkt 07 — phase",
+      "desc": "Oversized single declaration (kept whole). Lines 3081-3548. Markers: phase(24), context(17).",
+      "startLine": 3081,
+      "endLine": 3548,
+      "sourceFile": "readable/assets__player-Cd-Kznkt.pretty.js"
+    },
+    {
+      "file": "assets__player-Cd-Kznkt-tail-export.js",
+      "skipped": true,
+      "title": "assets__player-Cd-Kznkt — final export table (not sliced)",
+      "desc": "Lines 3549-3549. The chunk's final export {…} table — the exported bindings live in the earlier slices; a standalone tail carries no new statements, so it is indexed only.",
+      "startLine": 3549,
+      "endLine": 3549,
+      "sourceFile": "readable/assets__player-Cd-Kznkt.pretty.js",
+      "firstLine": "export { Vt as IntroPlayer };",
+      "lastLine": "export { Vt as IntroPlayer };"
+    },
+    {
+      "file": "assets__renderer-setup--EktvnNe-01.js",
+      "title": "assets__renderer-setup--EktvnNe 01 — url",
+      "desc": "Lines 1-338. Markers: url(8), intensity(7).",
+      "startLine": 1,
+      "endLine": 338,
+      "sourceFile": "readable/assets__renderer-setup--EktvnNe.pretty.js"
+    },
+    {
+      "file": "assets__renderer-setup--EktvnNe-02.js",
+      "title": "assets__renderer-setup--EktvnNe 02 — mat2",
+      "desc": "Lines 339-665. Markers: mat2(1), mat3(1).",
+      "startLine": 339,
+      "endLine": 665,
+      "sourceFile": "readable/assets__renderer-setup--EktvnNe.pretty.js"
+    },
+    {
+      "file": "assets__renderer-setup--EktvnNe-03.js",
+      "title": "assets__renderer-setup--EktvnNe 03 — highlightbalance",
+      "desc": "Lines 666-983. Markers: highlightbalance(10), shadowbalance(10).",
+      "startLine": 666,
+      "endLine": 983,
+      "sourceFile": "readable/assets__renderer-setup--EktvnNe.pretty.js"
+    },
+    {
+      "file": "assets__renderer-setup--EktvnNe-tail-export.js",
+      "skipped": true,
+      "title": "assets__renderer-setup--EktvnNe — final export table (not sliced)",
+      "desc": "Lines 984-1095. The chunk's final export {…} table — the exported bindings live in the earlier slices; a standalone tail carries no new statements, so it is indexed only.",
+      "startLine": 984,
+      "endLine": 1095,
+      "sourceFile": "readable/assets__renderer-setup--EktvnNe.pretty.js",
+      "firstLine": "export {",
+      "lastLine": "};"
+    },
+    {
+      "file": "assets__HDRLoader-C77IBAVq-vendor.js",
+      "wholeFile": true,
+      "title": "assets__HDRLoader-C77IBAVq — vendored three.js HDR loaders (vendor, whole-file, never sliced)",
+      "desc": "Lines 1-16651 of readable/assets__HDRLoader-C77IBAVq.pretty.js: The three.js Radiance/RGBE HDR loader pair (RGBELoader + the WebGPU DataTextureHalfFloat HDR loader the scenery pipeline uses) that Vite split out of the bundle as a dedicated chunk — third-party engine code, not app code. Vendor rule — indexed whole-file in readable/, never sliced or rewritten.",
+      "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
+      "startLine": 1,
+      "endLine": 16651,
+      "sourceFile": "readable/assets__HDRLoader-C77IBAVq.pretty.js"
+    },
+    {
+      "file": "assets__client-BtP_tmtQ-vendor.js",
+      "wholeFile": true,
+      "title": "assets__client-BtP_tmtQ — Wavedash SDK client shim (vendor, whole-file, never sliced)",
+      "desc": "Lines 1-7 of readable/assets__client-BtP_tmtQ.pretty.js: The Wavedash SDK client shim chunk (`window.Wavedash` lookup + default export) that the platform SDK injects into the build — third-party platform glue, not game code. Vendor rule — indexed whole-file in readable/, never sliced.",
+      "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
+      "startLine": 1,
+      "endLine": 7,
+      "sourceFile": "readable/assets__client-BtP_tmtQ.pretty.js"
+    },
+    {
+      "file": "embed-vendor.js",
+      "wholeFile": true,
+      "title": "embed — Wavedash platform SDK (vendor runtime, whole-file, never sliced)",
+      "desc": "Lines 1-23054 of readable/embed.pretty.js: The Wavedash platform SDK that the embed shell loads: iframe/parent messaging, lobby + P2P matchmaking bridge, Convex client wiring, cloud-save (userfs) and UGC managers, audio routing, progress reporting. Third-party platform runtime, not game code. Vendor rule — indexed whole-file in readable/, never sliced or rewritten.",
+      "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
+      "startLine": 1,
+      "endLine": 23054,
+      "sourceFile": "readable/embed.pretty.js"
+    },
+    {
+      "file": "sw-embed-vendor.js",
+      "wholeFile": true,
+      "title": "sw-embed — Wavedash embed service worker (vendor, whole-file, never sliced)",
+      "desc": "Lines 1-1828 of readable/sw-embed.pretty.js: The service worker the embed shell registers at the build-host origin scope: it attaches the gameplay-JWT Authorization header to every build-file request, handles POST /auth/refresh, and caches immutable build files (build-file-cache). Platform machinery — indexed whole-file in readable/, never sliced or rewritten.",
+      "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
+      "startLine": 1,
+      "endLine": 1828,
+      "sourceFile": "readable/sw-embed.pretty.js"
+    },
+    {
+      "file": "assets__index-J7X__Wjw-stylesheet.css",
+      "wholeFile": true,
+      "title": "assets__index-J7X__Wjw — stylesheet (whole-file, never sliced)",
+      "desc": "Lines 1-18451 of readable/assets__index-J7X__Wjw.pretty.css. Whole-file (stylesheet rule): the capture stylesheet is indexed whole in readable/, never sliced.",
+      "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
+      "startLine": 1,
+      "endLine": 18451,
+      "sourceFile": "readable/assets__index-J7X__Wjw.pretty.css"
+    },
+    {
+      "file": "embed-stylesheet.css",
+      "wholeFile": true,
+      "title": "embed — stylesheet (whole-file, never sliced)",
+      "desc": "Lines 1-636 of readable/embed.pretty.css. Whole-file (stylesheet rule): the capture stylesheet is indexed whole in readable/, never sliced.",
+      "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
+      "startLine": 1,
+      "endLine": 636,
+      "sourceFile": "readable/embed.pretty.css"
+    },
+    {
+      "file": "embed-inline-1-01.js",
+      "title": "embed-inline-1 01 — gameplayjwt",
+      "desc": "Lines 1-7. Markers: gameplayjwt(1), gbid(1).",
+      "startLine": 1,
+      "endLine": 7,
+      "sourceFile": "readable/embed-inline-1.pretty.js"
+    }
+  ],
+  "notRendered": [
+    {
+      "capture": "assets/geist-98bbbccb-BGnTDqni.woff2",
+      "bytes": 29288,
+      "sha256": "9b6f5ff45b278c744b5f379a2c4ecbaf858a842b8eaf82ac8d21b699ca16c608",
+      "rendered": false,
+      "reason": "font payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "assets/geist-mono-013b2f2f-pyAoGB9p.woff2",
+      "bytes": 23108,
+      "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b",
+      "rendered": false,
+      "reason": "font payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/afterburn-club.mp3",
+      "bytes": 4003775,
+      "sha256": "dc1cbce5473723fea2aa69214f5eee0db84a807d4aa4d58f224c32eddd407443",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/breakline-fever.mp3",
+      "bytes": 3487822,
+      "sha256": "29bcb0361795233605d3a69bdbb93932d051cb7626c7e740d9796fa999e3337c",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/breakneck-filter.mp3",
+      "bytes": 4377556,
+      "sha256": "6c52b67adba06013779d97ff2b3defaa05b6fddba0b7ea976c559bf7c0f6d741",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/dance-robo-jam-2.mp3",
+      "bytes": 4417884,
+      "sha256": "c125e086f8aa38914ffe138fcdcc28a2eab35326613271fdf5525d10e99e8024",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/dance-robo-jam.mp3",
+      "bytes": 4656876,
+      "sha256": "183c2264f89f1eac485fe56d404407dbc94de84eca38c2879e8d8a0c4cf6d919",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/dockside-ignition.mp3",
+      "bytes": 4157237,
+      "sha256": "97eb19f0b0fb85dc1e855a8b09be936e7fc1eecb040a2aecc02308e2ff9a48a4",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/gravity-well.mp3",
+      "bytes": 3763986,
+      "sha256": "af2d10b2fd35db0a379a603a98a279dfd6e5f47d318c255b3005b68c5e37d34b",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/grid-runners.mp3",
+      "bytes": 4201822,
+      "sha256": "bf805d28bb21da468090ba84736682d4daa3797330462dca91b1be8150fde8e6",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/intro-vector.mp3",
+      "bytes": 1422241,
+      "sha256": "c31ff6959086f14a37ff239b17f3a45e108c240c081c28fb7ff53f7dfd62e6b4",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/jesus-on-es.mp3",
+      "bytes": 3573687,
+      "sha256": "9c755b3280978abee94f08ef40908c6370afcef0700fac22c162227d5d6c1d95",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/menu-groove.mp3",
+      "bytes": 5227111,
+      "sha256": "b8dabce442fb67cf4ca47248d7097efe306c4fdb71daec3760d6a4916cbc0be6",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/metallic-dropouts-2.mp3",
+      "bytes": 4197518,
+      "sha256": "05d37e281bc013bfd7aa860d3dfe55da3237b2a7d7fa8c2a94be8bdeefe0aa19",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/metallic-dropouts-3.mp3",
+      "bytes": 4059758,
+      "sha256": "4e7387824f45cd0ff2e6e0fc7ff9ff014ed29cec81a889afd0d42e5bc4b824d4",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/metallic-dropouts.mp3",
+      "bytes": 4344590,
+      "sha256": "80c8eb1361d5a5d59643fbcfa97826fc0300ed56252c6bafa1288e29247c2bef",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/neon-undertow.mp3",
+      "bytes": 4654078,
+      "sha256": "e838ba49fbca0dece1bf284c73bfb90c1196d0300527fd8741a816a7dd6b1879",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/overclock-anthem.mp3",
+      "bytes": 3999555,
+      "sha256": "469c2216588b93db6a17c8d90ff13b6cfc4f9084c41cf70c567e616bfa441810",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/photo-finish.mp3",
+      "bytes": 4138269,
+      "sha256": "de4dda7a8623981487b04bed0b272b69896c0c6a54e08a8ce7a2ca054b49ff78",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/raw-club-mix.mp3",
+      "bytes": 4177296,
+      "sha256": "9c12f19ee9fb2f08881a95581c2e4a68d41d20473d53d2f10868d83b3f6a8513",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/vector-race.mp3",
+      "bytes": 4501345,
+      "sha256": "8624d59d35535a9225d957d57ae9744f5882e6174947c772954a0895e7ea353f",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "audio/velocity-bloom.mp3",
+      "bytes": 4652638,
+      "sha256": "f69abb9dc93e2987f80ae6f0d3fdd059b2106b4fda6b64152a28db8a3db9e574",
+      "rendered": false,
+      "reason": "audio payload — recorded hashed, never rendered or re-encoded"
+    },
+    {
+      "capture": "environment/docklands_02_1k.hdr",
+      "bytes": 1543169,
+      "sha256": "71e60fb2eaa58f2a0d09a6d36ae1e0a69ac7f2b9a23337bd28864f8473baebb1",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "environment/launch-bay_1k.hdr",
+      "bytes": 1317842,
+      "sha256": "eed34e1e79511e1e819b90ab92e83bd3f51e24b006debd0ca55419af49ff455a",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "environment/lunar-earth-512.png",
+      "bytes": 58468,
+      "sha256": "129cbf7a078b38b40bf4d3cfc6f82cf100cc95165a43b1ed61d058f797b7fc37",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "environment/lunar-earth-data-512.png",
+      "bytes": 102278,
+      "sha256": "56f228982b77c8e986bfc2568c13a87d65281c7799d6a49cc5fc01273c127944",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "environment/lunar-earth-data.png",
+      "bytes": 345849,
+      "sha256": "3a5bb07ed081d88d1a10b0fa686a70d6d011659d68123c10ee5aa5e7027aeac7",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "environment/lunar-earth.png",
+      "bytes": 151983,
+      "sha256": "4753e234a3537871de1f20b0fd986a94b3ec3858ac0c89a8cad7012ceffa1890",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "environment/lunar-milky-way-512.png",
+      "bytes": 48700,
+      "sha256": "856ec12486786cf1adf8bc4c8eb82c1ff1b9b825ca54b7852f3f874b72c05f5d",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "environment/lunar-milky-way.png",
+      "bytes": 439595,
+      "sha256": "14d9603afde78910f0e086dbe23b526102334a2081a8cd1aea649f4f5c6a3d5d",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "environment/regolith-detail-256.png",
+      "bytes": 135747,
+      "sha256": "2b9e9de08b22e50236c6b8529978c069770b6af9844c2df64c1274dba5ee2a4c",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "environment/regolith-detail.png",
+      "bytes": 545174,
+      "sha256": "6be2f7362d73c44beadd031d7996607fa3c3d4441b9a4d87cf0485a82182aeb6",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "environment/shanghai_bund_1k.hdr",
+      "bytes": 1640377,
+      "sha256": "77276a6b67cbf09611efc46e55871eead34e1fc6fa107db412207b91cf74697e",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "favicon.svg",
+      "bytes": 234,
+      "sha256": "cbd4ce1f7f4a6e8a477a56b0100cf89b86864bdac16619c164d12b7c64767b2e",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "models/awards.glb",
+      "bytes": 2187056,
+      "sha256": "c55ab5f4d274d11b1f12b8c54c97e9889c422673cbe89fa1ccf152d42a449566",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/kestrel-player.glb",
+      "bytes": 4304376,
+      "sha256": "358c15ea37e742d16a879cd79ea58b6c3dcd565e77414d7f9ddfffca432307c8",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/kestrel-wavedash-player.glb",
+      "bytes": 5166012,
+      "sha256": "015fdacb57a0fcf3dd73908f07f9b5615e861101afabff206c7924eadc0ac3cc",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/launch-bay.glb",
+      "bytes": 1666432,
+      "sha256": "10df3ff65343c4a18fc8706dfd6b1d91407b466456033737f92bcec79f6c2524",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/manta-claude-player.glb",
+      "bytes": 3870492,
+      "sha256": "f143c571881891eef23e96a939714385b509e1517b22fdd14c2cc8262b6f0ca1",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/manta-player.glb",
+      "bytes": 3978712,
+      "sha256": "e59482b68d09b9790da1da44e7f332bff7e33b7a39ce57145eb619a5a32cd0c8",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/meridian-flying-kit.glb",
+      "bytes": 1791668,
+      "sha256": "9ce3c0a744fff40dd431dc238de648074a146d261034969aba1c88636ca68a91",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/meridian-hotel-kit.glb",
+      "bytes": 3150104,
+      "sha256": "3d06ff544c7843dec728ba5d672db9311e09acd8415ce410b43945cf4e0b21e3",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/meridian-materials.glb",
+      "bytes": 3777248,
+      "sha256": "ab46482f93bc2fa7b5e360b6ef67df0e194292ef565a0e7e248011c83ac8ae6f",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/meridian-skyline-kit.glb",
+      "bytes": 1671360,
+      "sha256": "fc9ae75ad9368a17a29eb5a63a8c8c2eba7d0e302f782a49ce8cffc2dc5fdece",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/meridian-street-kit.glb",
+      "bytes": 1058072,
+      "sha256": "cc4a7463127910213777a88b335823d7b1397dd54ccd7ae2f9563b78f8760862",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/meridian-transit-kit.glb",
+      "bytes": 1264472,
+      "sha256": "7174a89fb3e6adc8d08163f807dad53136db18e75064473a3bc4296a1e3efd48",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/meridian-venue-kit.glb",
+      "bytes": 1878764,
+      "sha256": "d580846a97622b82c39bf10a1e14502433f3e599b0da80a74827c3cf4457e1da",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/monarch-player.glb",
+      "bytes": 4031532,
+      "sha256": "8415803a263e7dc676812645c26cea63a1b65acb715e616949ad0a9c322150ae",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/nocturne-city-kit.glb",
+      "bytes": 7322844,
+      "sha256": "168986f3acb330ff9cf91b0467cbbaa4de846ec1fff31af5d6b1188bfa90659f",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/port-life.glb",
+      "bytes": 253092,
+      "sha256": "c9816d49c4ec7cd8deb1ec7235ae87699894f18066906d6a893a1edd2582fb2e",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/previews/kestrel-wavedash.jpg",
+      "bytes": 31459,
+      "sha256": "13d11cf3b23d57d56cbf83c849d16d4edf616051520446dbde7a10f5450b9e9a",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "models/previews/kestrel.jpg",
+      "bytes": 32223,
+      "sha256": "986d2f676e9e8a8f3a75bc113c07da9238f377b1bedf9b786e6441c01753b623",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "models/previews/manta-claude.jpg",
+      "bytes": 27627,
+      "sha256": "fbab50e413ca1d9f742cc6ebb03f6dd9ab7fded0bb7ab7eae16a3d314ed6d370",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "models/previews/manta.jpg",
+      "bytes": 27196,
+      "sha256": "18b73f95f53a6bdb028c550fa3d1bdc5d5470f2d261630dc1ba643403beffb27",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "models/previews/monarch.jpg",
+      "bytes": 33366,
+      "sha256": "b96aead9bbac3ed941db835986266f54926943a90ad1915be9acae07ae58a78a",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "models/previews/talon.jpg",
+      "bytes": 26888,
+      "sha256": "e72e6d449fd6c508ed6630851a7e222a927679e3ff9f170adde0f5efb2e3597b",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "models/previews/vesper.jpg",
+      "bytes": 26630,
+      "sha256": "f87f77705ee2daee0e3af3a5b43ed95d5c1288401d4239373bcf34112113bf3c",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "models/shackleton-base-kit.glb",
+      "bytes": 7799900,
+      "sha256": "1b1a6e210874f3fe43e968712c0e88160c6812c6d6f77771237ee14d2b1c1086",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/sirocco-oasis-kit.glb",
+      "bytes": 6458992,
+      "sha256": "265d54972dd67b6c7d93fef8dca17b8bc8b640e6579b7dfecd9a58fc642e370f",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/solstice-port-kit.glb",
+      "bytes": 3474040,
+      "sha256": "0a1772ea66d7439c537db83fd8e32be690d8c28d5276fd3722898bd07d5f682c",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/talon-player.glb",
+      "bytes": 3919928,
+      "sha256": "80197bf041749ca82996f71be4514e9aefb1047305d98a5e8c5ae21f631b2f91",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/vesper-player.glb",
+      "bytes": 4028336,
+      "sha256": "259cda1e21f1d6de5809f81c8832baba1a6bc680e465c5b8884e12b845c6b614",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/weapons/cannon.glb",
+      "bytes": 1322376,
+      "sha256": "0b04226e51e2f9ec6ad7742e974840266f942be0c31a1f05a9a94a0f7a51e92c",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/weapons/mines.glb",
+      "bytes": 1958772,
+      "sha256": "17a865dc00c9922aff1157f91bed44563c37f1fc43e0b9c1d1633729d7301b3e",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/weapons/missile.glb",
+      "bytes": 1898020,
+      "sha256": "d98aa32e6f68689bdbe2d04e3eda3617123458f254e921b54cfcebca584481b3",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "models/weapons/rockets.glb",
+      "bytes": 1905368,
+      "sha256": "598654956b5dc0e9debb4c2c48cbc208a32d73938543ce7cd91e8f2cb71ce96e",
+      "rendered": false,
+      "reason": "engine payload (glTF/HDR scene data) — recorded hashed, never rendered or re-encoded (engine-build precedent)"
+    },
+    {
+      "capture": "ui/awards/medal-bronze.webp",
+      "bytes": 10862,
+      "sha256": "8e8e06ab020afa4e8bf5919eb3c438b57857a51eb4e61c1e8b1a9b49b21e76dc",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "ui/awards/medal-gold.webp",
+      "bytes": 10794,
+      "sha256": "0dd1d4067c9909f6026486605abe49dda882e4d1a5339908c50505f0125df9c2",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "ui/awards/medal-silver.webp",
+      "bytes": 9818,
+      "sha256": "00e958d8b64b4ee0a20fd575a04a85f251c87fc96755e96cfd35fdb14995a46d",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "ui/awards/trophy-bronze.webp",
+      "bytes": 14918,
+      "sha256": "233dcdb3c895584b01111d2a710950e64bbebb0f80423008c5698e1d842847e4",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "ui/awards/trophy-gold.webp",
+      "bytes": 15442,
+      "sha256": "7e9823eee7b35c3df3171113719ae9f5c2e3110a10d3fb550a9b50e20f968872",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    },
+    {
+      "capture": "ui/awards/trophy-silver.webp",
+      "bytes": 14808,
+      "sha256": "d58d7f875f3cec12285faa4f3bb716bf27a77ff8de7f70b3538016e1f9587960",
+      "rendered": false,
+      "reason": "binary asset payload — recorded hashed, never rendered"
+    }
+  ]
+}

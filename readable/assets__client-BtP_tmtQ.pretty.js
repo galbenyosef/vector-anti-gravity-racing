@@ -1,0 +1,7 @@
+var e = window.Wavedash;
+if (!e)
+  throw Error(
+    "Wavedash is not initialized. If you're running your game locally use the `wavedash dev` command to ensure the Wavedash SDK is loaded.",
+  );
+var t = e;
+export { t as default };
