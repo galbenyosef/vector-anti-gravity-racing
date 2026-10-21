@@ -490,6 +490,10 @@ async function main() {
       } else if (b.kind === "whole") {
         perFileVendor++;
         sections.push({
+          // A region is a line RANGE inside the source file, not a file of
+          // its own: its text lives in `sourceFile` over the recorded
+          // range, so `file` names the region (one label per region) and
+          // the two regions of a chunk never collide on one path.
           file: b.file,
           wholeFile: true,
           title: b.title,
@@ -511,6 +515,12 @@ async function main() {
           sourceFile,
           firstLine: lines[b.A - 1],
           lastLine: lines[b.B - 1],
+          // The tail's own text — the layer's index-only copy of the
+          // chunk's final export {…} table. A reader that walks the spec
+          // finds the table in the pristine and, without this, never finds
+          // the layer's counterpart of it: the table is then reported as
+          // UNCOVERED (unchecked), never as checked.
+          text: lines.slice(b.A - 1, b.B).join("\n"),
         });
       }
     }
@@ -558,8 +568,15 @@ async function main() {
       ? `Lines 1-${lines.length} of ${sourceFile}: ${cls.desc}`
       : `Lines 1-${lines.length} of ${sourceFile}. Whole-file (stylesheet rule): the capture stylesheet is indexed whole in readable/, never sliced.`;
     sections.push({
-      file: cls ? `${tag}-vendor.js` : `${tag}-stylesheet.css`,
+      // `file` is the DERIVED text of this section — the readable twin
+      // itself, which is what a reader must compare the capture against.
+      // A name that does not exist on disk names no text at all.
+      file: sourceFile,
       wholeFile: true,
+      // `origin` is the PRISTINE the twin was cut from: the capture, a
+      // file DIFFERENT from the derived text. A reader that walks the
+      // capture can then find the twin as its counterpart.
+      origin: rel,
       title,
       desc,
       note: "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
@@ -655,8 +672,11 @@ async function main() {
       // JS inline blocks slice like any app file; CSS inline blocks are wholeFile
       if (isStyle || b.kind === "importmap") {
         sections.push({
-          file: `${tag}.${ext}`,
+          // the derived text (the readable twin) + the capture it was cut
+          // from — see the vendor/stylesheet whole-file section above
+          file: `readable/${prettyFile}`,
           wholeFile: true,
+          origin: rel,
           title: `${tag} — inline ${b.kind} block (whole-file, never sliced)`,
           desc: `Lines 1-${lines.length} of readable/${prettyFile}. Whole-file: the document's inline ${b.kind} block (${b.bytes} B at bytes ${b.contentStart}-${b.contentEnd} of ${rel}) is indexed whole and never sliced.`,
           note: `whole-file (inline ${b.kind} block, not sliced)`,
@@ -757,6 +777,8 @@ async function main() {
             sourceFile: `readable/${prettyFile}`,
             firstLine: lines[bl.A - 1],
             lastLine: lines[bl.B - 1],
+            // the tail's own text — see the app-JS skipped section above
+            text: lines.slice(bl.A - 1, bl.B).join("\n"),
           });
         }
       }

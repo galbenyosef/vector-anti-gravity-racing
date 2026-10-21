@@ -235,7 +235,8 @@
       "endLine": 215,
       "sourceFile": "readable/assets__award-scene-D9Dc5ufv.pretty.js",
       "firstLine": "export { C as mountAward };",
-      "lastLine": "export { C as mountAward };"
+      "lastLine": "export { C as mountAward };",
+      "text": "export { C as mountAward };"
     },
     {
       "file": "assets__game-CsnOSIff-01.js",
@@ -1038,7 +1039,8 @@
       "endLine": 43359,
       "sourceFile": "readable/assets__game-CsnOSIff.pretty.js",
       "firstLine": "export { oT as RacerGame };",
-      "lastLine": "export { oT as RacerGame };"
+      "lastLine": "export { oT as RacerGame };",
+      "text": "export { oT as RacerGame };"
     },
     {
       "file": "assets__index-DphGw8Ou-react-vendor.js",
@@ -1437,7 +1439,8 @@
       "endLine": 85047,
       "sourceFile": "readable/assets__index-DphGw8Ou.pretty.js",
       "firstLine": "export {",
-      "lastLine": "};"
+      "lastLine": "};",
+      "text": "export {\n  lZ as $,\n  zu as $a,\n  Bm as $i,\n  zm as $n,\n  sx as $r,\n  JM as $t,\n  yQ as A,\n  Hf as Aa,\n  Ed as Ai,\n  Jb as An,\n  jp as Ar,\n  DY as At,\n  wQ as B,\n  Qf as Ba,\n  ky as Bi,\n  kd as Bn,\n  ad as Br,\n  yY as Bt,\n  UZ as C,\n  bd as Ca,\n  ff as Ci,\n  P_ as Cn,\n  ud as Cr,\n  VJ as Ct,\n  EQ as D,\n  L as Da,\n  Ld as Di,\n  Lm as Dn,\n  lb as Dr,\n  bY as Dt,\n  dQ as E,\n  I as Ea,\n  Hd as Ei,\n  rd as En,\n  Af as Er,\n  GY as Et,\n  cQ as F,\n  Yf as Fa,\n  Vd as Fi,\n  em as Fn,\n  Iy as Fr,\n  OY as Ft,\n  kZ as G,\n  Xu as Ga,\n  rp as Gi,\n  fm as Gn,\n  Fb as Gr,\n  yJ as Gt,\n  SZ as H,\n  np as Ha,\n  jd as Hi,\n  Lb as Hn,\n  od as Hr,\n  MJ as Ht,\n  _Q as I,\n  Jf as Ia,\n  Bd as Ii,\n  Hg as In,\n  Ly as Ir,\n  mY as It,\n  vZ as J,\n  $u as Ja,\n  vf as Ji,\n  ly as Jn,\n  i_ as Jr,\n  xJ as Jt,\n  pZ as K,\n  Zu as Ka,\n  my as Ki,\n  ip as Kn,\n  wv as Kr,\n  SJ as Kt,\n  mQ as L,\n  F as La,\n  Id as Li,\n  hb as Ln,\n  jy as Lr,\n  jY as Lt,\n  lQ as M,\n  Uf as Ma,\n  mf as Mi,\n  N_ as Mn,\n  nm as Mr,\n  AY as Mt,\n  pQ as N,\n  Mm as Na,\n  Wd as Ni,\n  V_ as Nn,\n  Og as Nr,\n  qY as Nt,\n  TQ as O,\n  Zp as Oa,\n  Rd as Oi,\n  Bp as On,\n  Hb as Or,\n  xY as Ot,\n  vQ as P,\n  by as Pa,\n  Gd as Pi,\n  tm as Pn,\n  gg as Pr,\n  KY as Pt,\n  oZ as Q,\n  Ku as Qa,\n  jf as Qi,\n  vd as Qn,\n  T_ as Qr,\n  OB as Qt,\n  xQ as R,\n  ux as Ra,\n  Md as Ri,\n  bh as Rn,\n  Ay as Rr,\n  _Y as Rt,\n  gQ as S,\n  _d as Sa,\n  af as Si,\n  pd as Sn,\n  cd as Sr,\n  GJ as St,\n  HZ as T,\n  hd as Ta,\n  Ud as Ti,\n  B_ as Tn,\n  kf as Tr,\n  $ as Tt,\n  OZ as U,\n  P as Ua,\n  Qp as Ui,\n  Bf as Un,\n  Qy as Ur,\n  IJ as Ut,\n  jZ as V,\n  xy as Va,\n  Ad as Vi,\n  F_ as Vn,\n  sd as Vr,\n  FJ as Vt,\n  DZ as W,\n  ep as Wa,\n  nd as Wi,\n  J_ as Wn,\n  km as Wr,\n  vJ as Wt,\n  mZ as X,\n  Lu as Xa,\n  Xd as Xi,\n  Dh as Xn,\n  Pb as Xr,\n  IM as Xt,\n  bZ as Y,\n  Yu as Ya,\n  gf as Yi,\n  fb as Yn,\n  py as Yr,\n  uJ as Yt,\n  _Z as Z,\n  Ru as Za,\n  Of as Zi,\n  Oh as Zn,\n  A_ as Zr,\n  vW as Zt,\n  C$ as _,\n  Ty as _a,\n  $d as _i,\n  Vg as _n,\n  pm as _r,\n  LY as _t,\n  B1 as a,\n  Bg as aa,\n  hf as ai,\n  RL as an,\n  Nu as ao,\n  fy as ar,\n  sX as at,\n  QZ as b,\n  Sd as ba,\n  nf as bi,\n  wh as bn,\n  w_ as br,\n  UJ as bt,\n  w1 as c,\n  _y as ca,\n  Fd as ci,\n  AB as cn,\n  Pu as co,\n  Kg as cr,\n  nX as ct,\n  l1 as d,\n  Kh as da,\n  sf as di,\n  Yx as dn,\n  gd as dr,\n  uY as dt,\n  Oy as ea,\n  Mp as ei,\n  cF as en,\n  Ju as eo,\n  c_ as er,\n  cZ as et,\n  u1 as f,\n  Xp as fa,\n  cf as fi,\n  yq as fn,\n  Vh as fr,\n  sY as ft,\n  k$ as g,\n  Eh as ga,\n  Qd as gi,\n  Yb as gn,\n  bf as gr,\n  lY as gt,\n  Q$ as h,\n  Th as ha,\n  Zd as hi,\n  rb as hn,\n  yf as hr,\n  dY as ht,\n  N1 as i,\n  Gg as ia,\n  _f as ii,\n  zP as in,\n  Fu as io,\n  vb as ir,\n  MX as it,\n  SQ as j,\n  $p as ja,\n  pf as ji,\n  I_ as jn,\n  Fp as jr,\n  VY as jt,\n  rQ as k,\n  nb as ka,\n  zd as ki,\n  H_ as kn,\n  Gh as kr,\n  RY as kt,\n  C1 as l,\n  Mb as la,\n  lf as li,\n  vF as ln,\n  fl as lo,\n  Ub as lr,\n  QY as lt,\n  G$ as m,\n  vy as ma,\n  df as mi,\n  Td as mn,\n  Wy as mr,\n  fY as mt,\n  g2 as n,\n  hy as na,\n  qd as ni,\n  xM as nn,\n  Wu as no,\n  Am as nr,\n  BX as nt,\n  F1 as o,\n  Kp as oa,\n  Yd as oi,\n  lJ as on,\n  Mu as oo,\n  Gb as or,\n  JY as ot,\n  W$ as p,\n  gb as pa,\n  uf as pi,\n  cJ as pn,\n  Uh as pr,\n  cY as pt,\n  yZ as q,\n  Qu as qa,\n  Jd as qi,\n  L_ as qn,\n  Ab as qr,\n  CJ as qt,\n  Q1 as r,\n  md as ra,\n  cp as ri,\n  Lx as rn,\n  Uu as ro,\n  yd as rr,\n  bX as rt,\n  L1 as s,\n  Mh as sa,\n  Dd as si,\n  VB as sn,\n  ju as so,\n  mb as sr,\n  YY as st,\n  a2 as t,\n  Tv as ta,\n  eb as ti,\n  oF as tn,\n  Gu as to,\n  Vf as tr,\n  RX as tt,\n  c1 as u,\n  og as ua,\n  of as ui,\n  $H as un,\n  e_ as ur,\n  oY as ut,\n  v$ as v,\n  fd as va,\n  ef as vi,\n  th as vn,\n  y_ as vr,\n  SY as vt,\n  VZ as w,\n  xd as wa,\n  Kd as wi,\n  z_ as wn,\n  ld as wr,\n  CY as wt,\n  BZ as x,\n  Cd as xa,\n  rf as xi,\n  Bh as xn,\n  C_ as xr,\n  qJ as xt,\n  jQ as y,\n  wd as ya,\n  tf as yi,\n  R_ as yn,\n  d_ as yr,\n  YJ as yt,\n  iQ as z,\n  wy as za,\n  Nd as zi,\n  Od as zn,\n  id as zr,\n  vY as zt,\n};"
     },
     {
       "file": "assets__player-Cd-Kznkt-01.js",
@@ -1504,7 +1507,8 @@
       "endLine": 3549,
       "sourceFile": "readable/assets__player-Cd-Kznkt.pretty.js",
       "firstLine": "export { Vt as IntroPlayer };",
-      "lastLine": "export { Vt as IntroPlayer };"
+      "lastLine": "export { Vt as IntroPlayer };",
+      "text": "export { Vt as IntroPlayer };"
     },
     {
       "file": "assets__renderer-setup--EktvnNe-01.js",
@@ -1539,11 +1543,13 @@
       "endLine": 1095,
       "sourceFile": "readable/assets__renderer-setup--EktvnNe.pretty.js",
       "firstLine": "export {",
-      "lastLine": "};"
+      "lastLine": "};",
+      "text": "export {\n  De as $,\n  f as $t,\n  E as A,\n  rt as At,\n  L as B,\n  V as Bt,\n  y as C,\n  Xe as Ct,\n  C as D,\n  et as Dt,\n  S as E,\n  $e as Et,\n  j as F,\n  ct as Ft,\n  F as G,\n  gt as Gt,\n  ve as H,\n  pt as Ht,\n  M as I,\n  lt as It,\n  Ce as J,\n  yt as Jt,\n  xe as K,\n  _t as Kt,\n  N as L,\n  ut as Lt,\n  O as M,\n  at as Mt,\n  k as N,\n  ot as Nt,\n  w as O,\n  tt as Ot,\n  A as P,\n  st as Pt,\n  R as Q,\n  St as Qt,\n  P as R,\n  dt as Rt,\n  v as S,\n  Ye as St,\n  x as T,\n  Qe as Tt,\n  ye as U,\n  mt as Ut,\n  _e as V,\n  ft as Vt,\n  be as W,\n  ht as Wt,\n  Te as X,\n  xt as Xt,\n  we as Y,\n  bt as Yt,\n  Ee as Z,\n  H as Zt,\n  me as _,\n  We as _t,\n  Rt as a,\n  Me as at,\n  g as b,\n  qe as bt,\n  ie as c,\n  Fe as ct,\n  se as d,\n  Re as dt,\n  p as en,\n  z as et,\n  ce as f,\n  ze as ft,\n  pe as g,\n  Ue as gt,\n  de as h,\n  He as ht,\n  Q as i,\n  je as it,\n  D as j,\n  it as jt,\n  T as k,\n  nt as kt,\n  oe as l,\n  Ie as lt,\n  ue as m,\n  Ve as mt,\n  Lt as n,\n  re as nn,\n  ke as nt,\n  jt as o,\n  Ne as ot,\n  le as p,\n  Be as pt,\n  Se as q,\n  vt as qt,\n  kt as r,\n  Ae as rt,\n  Mt as s,\n  Pe as st,\n  G as t,\n  te as tn,\n  Oe as tt,\n  h as u,\n  Le as ut,\n  he as v,\n  Ge as vt,\n  b as w,\n  Ze as wt,\n  _ as x,\n  Je as xt,\n  ge as y,\n  Ke as yt,\n  I as z,\n  B as zt,\n};"
     },
     {
-      "file": "assets__HDRLoader-C77IBAVq-vendor.js",
+      "file": "readable/assets__HDRLoader-C77IBAVq.pretty.js",
       "wholeFile": true,
+      "origin": "assets/HDRLoader-C77IBAVq.js",
       "title": "assets__HDRLoader-C77IBAVq — vendored three.js HDR loaders (vendor, whole-file, never sliced)",
       "desc": "Lines 1-16651 of readable/assets__HDRLoader-C77IBAVq.pretty.js: The three.js Radiance/RGBE HDR loader pair (RGBELoader + the WebGPU DataTextureHalfFloat HDR loader the scenery pipeline uses) that Vite split out of the bundle as a dedicated chunk — third-party engine code, not app code. Vendor rule — indexed whole-file in readable/, never sliced or rewritten.",
       "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
@@ -1552,8 +1558,9 @@
       "sourceFile": "readable/assets__HDRLoader-C77IBAVq.pretty.js"
     },
     {
-      "file": "assets__client-BtP_tmtQ-vendor.js",
+      "file": "readable/assets__client-BtP_tmtQ.pretty.js",
       "wholeFile": true,
+      "origin": "assets/client-BtP_tmtQ.js",
       "title": "assets__client-BtP_tmtQ — Wavedash SDK client shim (vendor, whole-file, never sliced)",
       "desc": "Lines 1-7 of readable/assets__client-BtP_tmtQ.pretty.js: The Wavedash SDK client shim chunk (`window.Wavedash` lookup + default export) that the platform SDK injects into the build — third-party platform glue, not game code. Vendor rule — indexed whole-file in readable/, never sliced.",
       "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
@@ -1562,8 +1569,9 @@
       "sourceFile": "readable/assets__client-BtP_tmtQ.pretty.js"
     },
     {
-      "file": "embed-vendor.js",
+      "file": "readable/embed.pretty.js",
       "wholeFile": true,
+      "origin": "embed.js",
       "title": "embed — Wavedash platform SDK (vendor runtime, whole-file, never sliced)",
       "desc": "Lines 1-23054 of readable/embed.pretty.js: The Wavedash platform SDK that the embed shell loads: iframe/parent messaging, lobby + P2P matchmaking bridge, Convex client wiring, cloud-save (userfs) and UGC managers, audio routing, progress reporting. Third-party platform runtime, not game code. Vendor rule — indexed whole-file in readable/, never sliced or rewritten.",
       "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
@@ -1572,8 +1580,9 @@
       "sourceFile": "readable/embed.pretty.js"
     },
     {
-      "file": "sw-embed-vendor.js",
+      "file": "readable/sw-embed.pretty.js",
       "wholeFile": true,
+      "origin": "sw-embed.js",
       "title": "sw-embed — Wavedash embed service worker (vendor, whole-file, never sliced)",
       "desc": "Lines 1-1828 of readable/sw-embed.pretty.js: The service worker the embed shell registers at the build-host origin scope: it attaches the gameplay-JWT Authorization header to every build-file request, handles POST /auth/refresh, and caches immutable build files (build-file-cache). Platform machinery — indexed whole-file in readable/, never sliced or rewritten.",
       "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
@@ -1582,8 +1591,9 @@
       "sourceFile": "readable/sw-embed.pretty.js"
     },
     {
-      "file": "assets__index-J7X__Wjw-stylesheet.css",
+      "file": "readable/assets__index-J7X__Wjw.pretty.css",
       "wholeFile": true,
+      "origin": "assets/index-J7X__Wjw.css",
       "title": "assets__index-J7X__Wjw — stylesheet (whole-file, never sliced)",
       "desc": "Lines 1-18451 of readable/assets__index-J7X__Wjw.pretty.css. Whole-file (stylesheet rule): the capture stylesheet is indexed whole in readable/, never sliced.",
       "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
@@ -1592,8 +1602,9 @@
       "sourceFile": "readable/assets__index-J7X__Wjw.pretty.css"
     },
     {
-      "file": "embed-stylesheet.css",
+      "file": "readable/embed.pretty.css",
       "wholeFile": true,
+      "origin": "embed.css",
       "title": "embed — stylesheet (whole-file, never sliced)",
       "desc": "Lines 1-636 of readable/embed.pretty.css. Whole-file (stylesheet rule): the capture stylesheet is indexed whole in readable/, never sliced.",
       "note": "whole-file (vendor/stylesheet rule): indexed in readable/, never sliced",
