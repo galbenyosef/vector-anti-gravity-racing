@@ -113,6 +113,7 @@ re-encoding).
 node tools/verify.mjs     # re-hash the capture against the manifest
 node tools/audit.js       # derived-layer integrity gate (AUDIT PASS)
 node tools/check-exports.mjs   # the derived layer still exports every public name
+node tools/derive.mjs --check          # the derived layer is current? (compares a fresh rebuild; writes NOTHING)
 ```
 
 ## Updating from upstream
