@@ -114,6 +114,7 @@ node tools/verify.mjs     # re-hash the capture against the manifest
 node tools/audit.js       # derived-layer integrity gate (AUDIT PASS)
 node tools/check-exports.mjs   # the derived layer still exports every public name
 node tools/derive.mjs --check          # the derived layer is current? (compares a fresh rebuild; writes NOTHING)
+node tools/check-links.mjs             # every export table names a binding the layer declares
 ```
 
 ## Updating from upstream
