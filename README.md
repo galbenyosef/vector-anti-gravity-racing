@@ -117,6 +117,29 @@ node tools/derive.mjs --check          # the derived layer is current? (compares
 node tools/check-links.mjs             # every export table names a binding the layer declares
 ```
 
+### Export-surface coverage
+
+`tools/check-exports.mjs` reports **7 export table(s) checked** and **no public
+export name lost** — one row for every export table the capture ships: the five
+app chunks checked through their recorded pretty twins, and the two vendor
+chunks checked capture-to-pretty. Its two `NOT covered` rows are the export
+tables inside the *reading copies*
+`readable/assets__HDRLoader-C77IBAVq.pretty.js` and
+`readable/assets__client-BtP_tmtQ.pretty.js`. Each is the same statement as the
+served chunk's table, which the gate already compares through the whole-file
+section's recorded `origin` (`wholefile:assets/HDRLoader-C77IBAVq.js`,
+`wholefile:assets/client-BtP_tmtQ.js`); the only possible counterpart for a
+reading copy is the file itself, which the gate correctly refuses to count as a
+check. Both chunks are load-bearing — `HDRLoader-C77IBAVq.js` is imported by
+`renderer-setup--EktvnNe.js`, `award-scene-D9Dc5ufv.js`, `player-Cd-Kznkt.js`
+and `game-CsnOSIff.js`, and `client-BtP_tmtQ.js` is dynamically imported by the
+entry chunk (`await import("./client-BtP_tmtQ.js")`, default export) — and a
+rename on either side turns the gate red, naming the file and the lost name.
+Both vendor chunks are whole-file by policy and are never sliced, so no third
+derived text exists to compare the reading copy against: no spec change can
+raise `checked` without manufacturing a self-compare. The two rows stay
+honestly uncovered; the capture-side names are covered.
+
 ## Updating from upstream
 
 ```
