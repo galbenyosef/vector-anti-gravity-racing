@@ -107,6 +107,23 @@ the mirror stores the content-decoded bytes exactly as a browser receives them,
 so a naive static server serves everything correctly as identity (nothing needs
 re-encoding).
 
+## Boot test (2026-10-27)
+
+- Entry: `http://127.0.0.1:5007/` served by `tools/serve.mjs` with the network
+  blocked (`MAP * 127.0.0.1`).
+- Outcome: **rendered** — the VECTOR main menu appeared over a live Solstice
+  Port scene; one click on `ENTER RACE` launched a 3-lap single race with the
+  in-race HUD (position 08/08, lap 01/03, race time running) and the Kestrel
+  rendering on the track.
+- Evidence: body 904 chars (menu) / 114 chars (in-race HUD); canvas 1262x540;
+  0 console errors; 0 failed same-origin requests, 0 blocked cross-origin;
+  screenshot `docs/boot-2026-10-27.png`.
+- Gaps seen: none — the server logged 9 successful same-origin requests and no
+  404s during boot and race entry.
+
+The mirror's existing "playable build" claim is confirmed, not refuted: the
+capture boots and races offline from local files alone.
+
 ## Verify
 
 ```
