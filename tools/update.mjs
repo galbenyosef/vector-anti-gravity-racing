@@ -72,7 +72,7 @@ const ORIGIN = "https://wavedash.com";
 const PAGE = "/games/vector-anti-gravity-racing";
 const GAME_SLUG = "vector-anti-gravity-racing";
 const LAUNCH = "/api/game-launch";
-const CAPTURED_BUILD_HASH = "1c1257d5"; // fnv32(gameBuildId) of the captured build
+const CAPTURED_BUILD_HASH = "dd722f6c"; // fnv32(gameBuildId) of the captured build
 const CONC = 6;
 const UA = {
   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",

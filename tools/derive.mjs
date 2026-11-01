@@ -12,13 +12,13 @@
 //
 // Architecture fact that shapes this pipeline: the game's own closure is the
 // per-build CDN host root — index.html (hand-written shell: WebGPU meta +
-// module script + stylesheet), assets/index-DphGw8Ou.js (the Vite entry chunk:
+// module script + stylesheet), assets/index-DF2rMRzV.js (the Vite entry chunk:
 // React runtime + React-Aria UI vendor code, the app's music/track/ship tables,
 // the bundled three.js WebGPU renderer + TSL node system, and the app UI),
-// assets/game-CsnOSIff.js (the race simulation: world kits, combat, rivals,
-// HUD wiring), assets/player-Cd-Kznkt.js (the intro/garage scene), the scenery
-// chunks assets/renderer-setup--EktvnNe.js + assets/award-scene-D9Dc5ufv.js,
-// assets/HDRLoader-C77IBAVq.js (vendored three.js HDR/RGBE loaders),
+// assets/game-D43Oxqny.js (the race simulation: world kits, combat, rivals,
+// HUD wiring), assets/player-D3Mk6s3d.js (the intro/garage scene), the scenery
+// chunks assets/renderer-setup-PQ27DzE4.js + assets/award-scene-DZbn-o_G.js,
+// assets/HDRLoader-Bse-uZFj.js (vendored three.js HDR/RGBE loaders),
 // assets/audio-preparation.worker-CEAJS9BC.js (the procedural-audio worker),
 // assets/client-BtP_tmtQ.js (the Wavedash SDK client shim), fonts under
 // assets/, and the payload trees models/, environment/, audio/, ui/. The
@@ -26,6 +26,9 @@
 // the `embed` document (extensionless HTML with the __WAVEDASH_GAME__ config),
 // embed.js (the Wavedash SDK, third-party platform runtime), embed.css and
 // sw-embed.js (the service worker that authorizes every build-file fetch).
+// Chunk names are content-hashed and rotate per build: this file's vendor
+// classification and the two content-anchored entry-chunk regions are keyed on
+// the CURRENT build's names (build 104 / dd722f6c); a refresh must update them.
 //
 // Pipeline:
 //   app JS (index/game/player/scenery chunks + the audio worker) ->
@@ -51,7 +54,7 @@
 //                                 and the vendored three.js HDR loaders /
 //                                 SDK client shim are third-party runtime,
 //                                 indexed whole, never sliced).
-//   assets/index-J7X__Wjw.css + embed.css -> readable pretties + wholeFile
+//   assets/index-D1wBW0TU.css + embed.css -> readable pretties + wholeFile
 //                                 (stylesheet rule).
 //   index.html + embed         -> inline <script> scan: index.html references
 //                                 external chunks only (no inline content),
@@ -114,8 +117,8 @@ const VENDOR = {
     guard: (t) => t.includes("wavedash:claim-clients") || t.includes("X-Wd-Sw") || t.includes("build-file-cache"),
     what: "Wavedash embed service worker",
   },
-  "assets__HDRLoader-C77IBAVq": {
-    title: "assets__HDRLoader-C77IBAVq — vendored three.js HDR loaders (vendor, whole-file, never sliced)",
+  "assets__HDRLoader-Bse-uZFj": {
+    title: "assets__HDRLoader-Bse-uZFj — vendored three.js HDR loaders (vendor, whole-file, never sliced)",
     desc:
       "The three.js Radiance/RGBE HDR loader pair (RGBELoader + the WebGPU DataTextureHalfFloat HDR " +
       "loader the scenery pipeline uses) that Vite split out of the bundle as a dedicated chunk — " +
@@ -373,7 +376,7 @@ async function main() {
       specials.push({ ...block, A: stmts[a].startLine, B: stmts[b].endLine });
     };
 
-    if (tag === "assets__index-DphGw8Ou") {
+    if (tag === "assets__index-DF2rMRzV") {
       // ── content-anchored vendor region 1: the React/React-Aria runtime head
       const appAudio = stmts.findIndex((s) => s.text.includes("dockside-ignition"));
       if (appAudio < 5) throw new Error(`${rel}: app audio-table anchor (dockside-ignition) not found`);
@@ -854,11 +857,11 @@ async function main() {
       "host (mx70fsjxynf8mke9yqthamtfcx8dtssc-<user-hash>-<build-hash>.builds.wavedashcdn.com) behind a " +
       "platform session (playKey → embed → gameplay JWT). §0.4 fork-over-mirror was checked on " +
       "2026-10-13 — the project publishes no source repository, so the mirror stands. The build is a " +
-      "Vite production bundle: index.html loads the entry chunk assets/index-DphGw8Ou.js (React runtime + " +
+      "Vite production bundle: index.html loads the entry chunk assets/index-DF2rMRzV.js (React runtime + " +
       "React-Aria UI vendors, the app's music/track/ship tables, the bundled three.js WebGPU+TSL engine, " +
-      "the app UI), which pulls game-CsnOSIff.js (race simulation), player-Cd-Kznkt.js (intro/garage), " +
-      "renderer-setup--EktvnNe.js and award-scene-D9Dc5ufv.js (scenery), the vendored three.js loaders " +
-      "HDRLoader-C77IBAVq.js, the app's audio-preparation.worker-CEAJS9BC.js and the Wavedash SDK client " +
+      "the app UI), which pulls game-D43Oxqny.js (race simulation), player-D3Mk6s3d.js (intro/garage), " +
+      "renderer-setup-PQ27DzE4.js and award-scene-DZbn-o_G.js (scenery), the vendored three.js loaders " +
+      "HDRLoader-Bse-uZFj.js, the app's audio-preparation.worker-CEAJS9BC.js and the Wavedash SDK client " +
       "shim client-BtP_tmtQ.js. Derived pipeline: capture → pinned prettier 3.9.6 (module API, default " +
       "options, applied until a fixed point — the entry chunk needs 2 passes, everything else 1; the " +
       "recorded pass count is replayed by the audit — never the CLI: it respects .gitignore and can " +
@@ -869,14 +872,14 @@ async function main() {
       "header. Every slice parses standalone under `node --input-type=module --check -` and round-trips " +
       "byte-exact to its recorded readable line range. Vendor rule — wholeFile sections/regions, never " +
       "sliced: embed.js (the Wavedash platform SDK), sw-embed.js (its embed service worker), " +
-      "assets/HDRLoader-C77IBAVq.js (the vendored three.js HDR loader chunk) and " +
+      "assets/HDRLoader-Bse-uZFj.js (the vendored three.js HDR loader chunk) and " +
       "assets/client-BtP_tmtQ.js (the SDK client shim) are third-party runtime; inside the entry chunk " +
       "two content-anchored wholeFile regions are asserted by guards — the React/React-Aria UI runtime " +
       "head and the bundled three.js WebGPU+TSL engine region (ending at the app's track-spline builder). " +
       "The scenery chunks carry bundler-merged three.js/TSL utility code interleaved with app code at " +
       "minified module boundaries; those files are sliced statement-aligned and their slices are NOT " +
       "claimed as clean app code — recorded honestly. Machinery/stylesheet rule — " +
-      "assets/index-J7X__Wjw.css and embed.css are wholeFile. Non-standalone parts are skipped sections: " +
+      "assets/index-D1wBW0TU.css and embed.css are wholeFile. Non-standalone parts are skipped sections: " +
       "each chunk's final pure export {…} table. Payload rule (engine-build precedent): every file under " +
       "models/, environment/, audio/, ui/ and the fonts are recorded in notRendered with size + sha256 — " +
       "never prettified, re-encoded or otherwise rewritten. Backend paths fetched at runtime — " +

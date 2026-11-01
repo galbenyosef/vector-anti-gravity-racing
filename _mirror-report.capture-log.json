@@ -1,12 +1,14 @@
 {
-  "generated": "2026-10-13T04:01:48.515Z",
-  "host": "mx70fsjxynf8mke9yqthamtfcx8dtssc-b87bd41c-1c1257d5.builds.wavedashcdn.com",
-  "build": "1c1257d5",
+  "generated": "2026-11-01T19:53:38.070Z",
+  "host": "mx70fsjxynf8mke9yqthamtfcx8dtssc-8f2d7ccd-dd722f6c.builds.wavedashcdn.com",
+  "build": "dd722f6c",
+  "buildId": "mn72mjx510z3mv4kgmzawyy53x8h9gc0",
+  "buildNumber": 104,
   "captured": [
     {
-      "p": "assets/award-scene-D9Dc5ufv.js",
+      "p": "assets/HDRLoader-Bse-uZFj.js",
       "status": 200,
-      "bytes": 3841,
+      "bytes": 395100,
       "enc": "br"
     },
     {
@@ -16,9 +18,9 @@
       "enc": "br"
     },
     {
-      "p": "assets/client-BtP_tmtQ.js",
+      "p": "assets/award-scene-DZbn-o_G.js",
       "status": 200,
-      "bytes": 206,
+      "bytes": 3841,
       "enc": "br"
     },
     {
@@ -28,15 +30,9 @@
       "enc": ""
     },
     {
-      "p": "assets/HDRLoader-C77IBAVq.js",
+      "p": "assets/client-BtP_tmtQ.js",
       "status": 200,
-      "bytes": 395149,
-      "enc": "br"
-    },
-    {
-      "p": "assets/player-Cd-Kznkt.js",
-      "status": 200,
-      "bytes": 81248,
+      "bytes": 206,
       "enc": "br"
     },
     {
@@ -46,27 +42,33 @@
       "enc": ""
     },
     {
-      "p": "assets/index-J7X__Wjw.css",
+      "p": "assets/player-D3Mk6s3d.js",
       "status": 200,
-      "bytes": 372266,
+      "bytes": 81248,
       "enc": "br"
     },
     {
-      "p": "assets/renderer-setup--EktvnNe.js",
+      "p": "assets/index-D1wBW0TU.css",
+      "status": 200,
+      "bytes": 398204,
+      "enc": "br"
+    },
+    {
+      "p": "assets/game-D43Oxqny.js",
+      "status": 200,
+      "bytes": 879797,
+      "enc": "br"
+    },
+    {
+      "p": "assets/renderer-setup-PQ27DzE4.js",
       "status": 200,
       "bytes": 18038,
       "enc": "br"
     },
     {
-      "p": "assets/index-DphGw8Ou.js",
+      "p": "assets/index-DF2rMRzV.js",
       "status": 200,
-      "bytes": 1577466,
-      "enc": "br"
-    },
-    {
-      "p": "assets/game-CsnOSIff.js",
-      "status": 200,
-      "bytes": 871481,
+      "bytes": 1602545,
       "enc": "br"
     },
     {
@@ -82,15 +84,27 @@
       "enc": ""
     },
     {
-      "p": "audio/breakneck-filter.mp3",
+      "p": "audio/dance-robo-jam.mp3",
       "status": 200,
-      "bytes": 4377556,
+      "bytes": 4656876,
       "enc": ""
     },
     {
       "p": "audio/dance-robo-jam-2.mp3",
       "status": 200,
       "bytes": 4417884,
+      "enc": ""
+    },
+    {
+      "p": "audio/breakneck-filter.mp3",
+      "status": 200,
+      "bytes": 4377556,
+      "enc": ""
+    },
+    {
+      "p": "audio/dockside-ignition.mp3",
+      "status": 200,
+      "bytes": 4157237,
       "enc": ""
     },
     {
@@ -106,21 +120,15 @@
       "enc": ""
     },
     {
-      "p": "audio/dance-robo-jam.mp3",
-      "status": 200,
-      "bytes": 4656876,
-      "enc": ""
-    },
-    {
       "p": "audio/grid-runners.mp3",
       "status": 200,
       "bytes": 4201822,
       "enc": ""
     },
     {
-      "p": "audio/dockside-ignition.mp3",
+      "p": "audio/metallic-dropouts.mp3",
       "status": 200,
-      "bytes": 4157237,
+      "bytes": 4344590,
       "enc": ""
     },
     {
@@ -136,27 +144,21 @@
       "enc": ""
     },
     {
-      "p": "audio/menu-groove.mp3",
-      "status": 200,
-      "bytes": 5227111,
-      "enc": ""
-    },
-    {
       "p": "audio/metallic-dropouts-3.mp3",
       "status": 200,
       "bytes": 4059758,
       "enc": ""
     },
     {
-      "p": "audio/metallic-dropouts.mp3",
+      "p": "audio/menu-groove.mp3",
       "status": 200,
-      "bytes": 4344590,
+      "bytes": 5227111,
       "enc": ""
     },
     {
-      "p": "audio/neon-undertow.mp3",
+      "p": "audio/overclock-anthem.mp3",
       "status": 200,
-      "bytes": 4654078,
+      "bytes": 3999555,
       "enc": ""
     },
     {
@@ -168,25 +170,25 @@
     {
       "p": "embed.css",
       "status": 200,
-      "bytes": 9831,
+      "bytes": 9884,
       "enc": "br"
     },
     {
       "p": "embed.js",
       "status": 200,
-      "bytes": 732728,
+      "bytes": 766951,
       "enc": "br"
     },
     {
-      "p": "audio/raw-club-mix.mp3",
+      "p": "audio/neon-undertow.mp3",
       "status": 200,
-      "bytes": 4177296,
+      "bytes": 4654078,
       "enc": ""
     },
     {
-      "p": "environment/docklands_02_1k.hdr",
+      "p": "audio/photo-finish.mp3",
       "status": 200,
-      "bytes": 1543169,
+      "bytes": 4138269,
       "enc": ""
     },
     {
@@ -196,15 +198,21 @@
       "enc": ""
     },
     {
-      "p": "environment/launch-bay_1k.hdr",
+      "p": "environment/docklands_02_1k.hdr",
       "status": 200,
-      "bytes": 1317842,
+      "bytes": 1543169,
       "enc": ""
     },
     {
-      "p": "environment/lunar-earth-data-512.png",
+      "p": "environment/lunar-earth-data.png",
       "status": 200,
-      "bytes": 102278,
+      "bytes": 345849,
+      "enc": ""
+    },
+    {
+      "p": "environment/launch-bay_1k.hdr",
+      "status": 200,
+      "bytes": 1317842,
       "enc": ""
     },
     {
@@ -214,21 +222,15 @@
       "enc": ""
     },
     {
-      "p": "audio/velocity-bloom.mp3",
+      "p": "environment/lunar-earth-data-512.png",
       "status": 200,
-      "bytes": 4652638,
+      "bytes": 102278,
       "enc": ""
     },
     {
       "p": "environment/lunar-milky-way-512.png",
       "status": 200,
       "bytes": 48700,
-      "enc": ""
-    },
-    {
-      "p": "environment/lunar-earth-data.png",
-      "status": 200,
-      "bytes": 345849,
       "enc": ""
     },
     {
@@ -244,9 +246,9 @@
       "enc": ""
     },
     {
-      "p": "environment/regolith-detail.png",
+      "p": "audio/vector-race.mp3",
       "status": 200,
-      "bytes": 545174,
+      "bytes": 4501345,
       "enc": ""
     },
     {
@@ -256,9 +258,15 @@
       "enc": "br"
     },
     {
-      "p": "audio/photo-finish.mp3",
+      "p": "environment/shanghai_bund_1k.hdr",
       "status": 200,
-      "bytes": 4138269,
+      "bytes": 1640377,
+      "enc": ""
+    },
+    {
+      "p": "environment/regolith-detail.png",
+      "status": 200,
+      "bytes": 545174,
       "enc": ""
     },
     {
@@ -268,27 +276,9 @@
       "enc": "br"
     },
     {
-      "p": "audio/vector-race.mp3",
+      "p": "audio/velocity-bloom.mp3",
       "status": 200,
-      "bytes": 4501345,
-      "enc": ""
-    },
-    {
-      "p": "audio/overclock-anthem.mp3",
-      "status": 200,
-      "bytes": 3999555,
-      "enc": ""
-    },
-    {
-      "p": "environment/shanghai_bund_1k.hdr",
-      "status": 200,
-      "bytes": 1640377,
-      "enc": ""
-    },
-    {
-      "p": "models/launch-bay.glb",
-      "status": 200,
-      "bytes": 1666432,
+      "bytes": 4652638,
       "enc": ""
     },
     {
@@ -298,39 +288,21 @@
       "enc": ""
     },
     {
+      "p": "models/launch-bay.glb",
+      "status": 200,
+      "bytes": 1666432,
+      "enc": ""
+    },
+    {
+      "p": "audio/raw-club-mix.mp3",
+      "status": 200,
+      "bytes": 4177296,
+      "enc": ""
+    },
+    {
       "p": "models/meridian-flying-kit.glb",
       "status": 200,
       "bytes": 1791668,
-      "enc": ""
-    },
-    {
-      "p": "models/kestrel-wavedash-player.glb",
-      "status": 200,
-      "bytes": 5166012,
-      "enc": ""
-    },
-    {
-      "p": "models/manta-claude-player.glb",
-      "status": 200,
-      "bytes": 3870492,
-      "enc": ""
-    },
-    {
-      "p": "models/meridian-hotel-kit.glb",
-      "status": 200,
-      "bytes": 3150104,
-      "enc": ""
-    },
-    {
-      "p": "models/manta-player.glb",
-      "status": 200,
-      "bytes": 3978712,
-      "enc": ""
-    },
-    {
-      "p": "models/meridian-skyline-kit.glb",
-      "status": 200,
-      "bytes": 1671360,
       "enc": ""
     },
     {
@@ -340,15 +312,51 @@
       "enc": ""
     },
     {
+      "p": "models/manta-claude-player.glb",
+      "status": 200,
+      "bytes": 3870492,
+      "enc": ""
+    },
+    {
+      "p": "models/kestrel-wavedash-player.glb",
+      "status": 200,
+      "bytes": 5166012,
+      "enc": ""
+    },
+    {
       "p": "models/meridian-street-kit.glb",
       "status": 200,
       "bytes": 1058072,
       "enc": ""
     },
     {
+      "p": "models/meridian-skyline-kit.glb",
+      "status": 200,
+      "bytes": 1671360,
+      "enc": ""
+    },
+    {
+      "p": "models/manta-player.glb",
+      "status": 200,
+      "bytes": 3978712,
+      "enc": ""
+    },
+    {
       "p": "models/meridian-transit-kit.glb",
       "status": 200,
       "bytes": 1264472,
+      "enc": ""
+    },
+    {
+      "p": "models/port-life.glb",
+      "status": 200,
+      "bytes": 253092,
+      "enc": ""
+    },
+    {
+      "p": "models/previews/kestrel-wavedash.jpg",
+      "status": 200,
+      "bytes": 31459,
       "enc": ""
     },
     {
@@ -370,18 +378,6 @@
       "enc": ""
     },
     {
-      "p": "models/port-life.glb",
-      "status": 200,
-      "bytes": 253092,
-      "enc": ""
-    },
-    {
-      "p": "models/previews/kestrel-wavedash.jpg",
-      "status": 200,
-      "bytes": 31459,
-      "enc": ""
-    },
-    {
       "p": "models/previews/manta.jpg",
       "status": 200,
       "bytes": 27196,
@@ -394,15 +390,21 @@
       "enc": ""
     },
     {
+      "p": "models/previews/talon.jpg",
+      "status": 200,
+      "bytes": 26888,
+      "enc": ""
+    },
+    {
       "p": "models/previews/vesper.jpg",
       "status": 200,
       "bytes": 26630,
       "enc": ""
     },
     {
-      "p": "models/previews/talon.jpg",
+      "p": "models/meridian-hotel-kit.glb",
       "status": 200,
-      "bytes": 26888,
+      "bytes": 3150104,
       "enc": ""
     },
     {
@@ -412,9 +414,9 @@
       "enc": ""
     },
     {
-      "p": "models/monarch-player.glb",
+      "p": "models/talon-player.glb",
       "status": 200,
-      "bytes": 4031532,
+      "bytes": 3919928,
       "enc": ""
     },
     {
@@ -424,15 +426,9 @@
       "enc": ""
     },
     {
-      "p": "models/talon-player.glb",
+      "p": "models/sirocco-oasis-kit.glb",
       "status": 200,
-      "bytes": 3919928,
-      "enc": ""
-    },
-    {
-      "p": "models/vesper-player.glb",
-      "status": 200,
-      "bytes": 4028336,
+      "bytes": 6458992,
       "enc": ""
     },
     {
@@ -442,9 +438,21 @@
       "enc": ""
     },
     {
+      "p": "models/nocturne-city-kit.glb",
+      "status": 200,
+      "bytes": 7322844,
+      "enc": ""
+    },
+    {
       "p": "models/weapons/mines.glb",
       "status": 200,
       "bytes": 1958772,
+      "enc": ""
+    },
+    {
+      "p": "models/weapons/missile.glb",
+      "status": 200,
+      "bytes": 1898020,
       "enc": ""
     },
     {
@@ -452,6 +460,12 @@
       "status": 200,
       "bytes": 30200,
       "enc": "br"
+    },
+    {
+      "p": "models/vesper-player.glb",
+      "status": 200,
+      "bytes": 4028336,
+      "enc": ""
     },
     {
       "p": "ui/awards/medal-bronze.webp",
@@ -472,15 +486,9 @@
       "enc": ""
     },
     {
-      "p": "ui/awards/trophy-bronze.webp",
+      "p": "models/weapons/rockets.glb",
       "status": 200,
-      "bytes": 14918,
-      "enc": ""
-    },
-    {
-      "p": "models/weapons/missile.glb",
-      "status": 200,
-      "bytes": 1898020,
+      "bytes": 1905368,
       "enc": ""
     },
     {
@@ -490,33 +498,27 @@
       "enc": ""
     },
     {
+      "p": "ui/awards/trophy-bronze.webp",
+      "status": 200,
+      "bytes": 14918,
+      "enc": ""
+    },
+    {
       "p": "ui/awards/trophy-silver.webp",
       "status": 200,
       "bytes": 14808,
       "enc": ""
     },
     {
-      "p": "models/weapons/rockets.glb",
-      "status": 200,
-      "bytes": 1905368,
-      "enc": ""
-    },
-    {
-      "p": "models/nocturne-city-kit.glb",
-      "status": 200,
-      "bytes": 7322844,
-      "enc": ""
-    },
-    {
-      "p": "models/sirocco-oasis-kit.glb",
-      "status": 200,
-      "bytes": 6458992,
-      "enc": ""
-    },
-    {
       "p": "models/shackleton-base-kit.glb",
       "status": 200,
       "bytes": 7799900,
+      "enc": ""
+    },
+    {
+      "p": "models/monarch-player.glb",
+      "status": 200,
+      "bytes": 4031532,
       "enc": ""
     }
   ],

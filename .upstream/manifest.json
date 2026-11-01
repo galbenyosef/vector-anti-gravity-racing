@@ -1,22 +1,22 @@
 {
-  "generated": "2026-10-13",
+  "generated": "2026-11-01",
   "origin": "https://wavedash.com/games/vector-anti-gravity-racing",
   "files": {
     "assets/audio-preparation.worker-CEAJS9BC.js": {
       "bytes": 4455,
       "sha256": "5d88765cbc6e5f36a9100a0f89198c77defd5aaac100dd351a2195ee35c62057"
     },
-    "assets/award-scene-D9Dc5ufv.js": {
+    "assets/award-scene-DZbn-o_G.js": {
       "bytes": 3841,
-      "sha256": "1bfaee4f48d1a96fa673b7ad9038ee5648f81e5a2aba7b930936b5e43c09acd7"
+      "sha256": "9a59b1e47951aaefb9917087a043318df590349a45403e71f3947a9c3c5bf5f5"
     },
     "assets/client-BtP_tmtQ.js": {
       "bytes": 206,
       "sha256": "c01401cb39e0dcbab94ca8f6a4dffb9e7aac3411543c4de361dfe2cd0f508464"
     },
-    "assets/game-CsnOSIff.js": {
-      "bytes": 871481,
-      "sha256": "3b0330327be03ce22dee9e9dabf1a51ce7320bf2d1321cbd60a3c770f170ac4e"
+    "assets/game-D43Oxqny.js": {
+      "bytes": 879797,
+      "sha256": "2cc2b6247f2b2a64331793056ca464e0e047ce6e630a8ebfd59e9551fd0b32c8"
     },
     "assets/geist-98bbbccb-BGnTDqni.woff2": {
       "bytes": 29288,
@@ -26,25 +26,25 @@
       "bytes": 23108,
       "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b"
     },
-    "assets/HDRLoader-C77IBAVq.js": {
-      "bytes": 395149,
-      "sha256": "7b211936ab761c7a2c9c5f2c9dbfb7ffcf0977d8b7d9a63de68889caba045480"
+    "assets/HDRLoader-Bse-uZFj.js": {
+      "bytes": 395100,
+      "sha256": "ab3ac3144a4a7ee3c0e046b10b12199ec9c675eed1bdf962a7065b67ae305e6b"
     },
-    "assets/index-DphGw8Ou.js": {
-      "bytes": 1577466,
-      "sha256": "0b3fea955da62724d7747788bc14130b9353482a14fc1c6d42a2f195a7f813d0"
+    "assets/index-D1wBW0TU.css": {
+      "bytes": 398204,
+      "sha256": "185841402dd4305e044595faf5f6fd884606c62a06b277b557ec2fbd331cb8af"
     },
-    "assets/index-J7X__Wjw.css": {
-      "bytes": 372266,
-      "sha256": "972b8d4d8e0ef1dcf9818eae66942caea722c8eb0b60c3d366ec65fa7ed2cff6"
+    "assets/index-DF2rMRzV.js": {
+      "bytes": 1602545,
+      "sha256": "da9b79a30d44687df588417ceea8f1c24081bec6ebaf65b2de54b741bc31fc53"
     },
-    "assets/player-Cd-Kznkt.js": {
+    "assets/player-D3Mk6s3d.js": {
       "bytes": 81248,
-      "sha256": "dcaffd595783df3f11782b7458d225fc313d3930e2bc0c0fde25c85e08a4804f"
+      "sha256": "a82d684a166a65a692c61bbc81af1cc881f9e7ca4475ad5afdce31a344938a39"
     },
-    "assets/renderer-setup--EktvnNe.js": {
+    "assets/renderer-setup-PQ27DzE4.js": {
       "bytes": 18038,
-      "sha256": "80a56d1113cfb18613b073088d163e05b3ae0ea90a1b0b33d7f3a19cca545016"
+      "sha256": "2269a39a07eb909d097f53af1d6d1ebb6986370ba66b67446a3d9d94711182f7"
     },
     "audio/afterburn-club.mp3": {
       "bytes": 4003775,
@@ -128,16 +128,16 @@
     },
     "embed": {
       "bytes": 1776,
-      "sha256": "7e23f21cf0159aa3d65405daa08d42a418a91564c6532000b6b28626c1db4f6b",
+      "sha256": "7ff056b290b5c1d5fc04370e53f6d680a0685c73da4e7cb1599dbcd0d37e10af",
       "dynamic": true
     },
     "embed.css": {
-      "bytes": 9831,
-      "sha256": "ab8c6ec5254b739d6b9270dbc3a79aacbcf56a5f353c2885ce5e870daf35d915"
+      "bytes": 9884,
+      "sha256": "a4cf19b93e2215edf9f249a909df3c10477d8898daa3d77c6ed59f0c8b29d93f"
     },
     "embed.js": {
-      "bytes": 732728,
-      "sha256": "0c3bd2aadac43a34b93f7b6b7ada0229f5a14b4dc2b4b3b5d3a49c3801dcee83"
+      "bytes": 766951,
+      "sha256": "73504aa10d384b02eb4ca9868939ae55de4e75786995b008f2f2150175860519"
     },
     "environment/docklands_02_1k.hdr": {
       "bytes": 1543169,
@@ -189,7 +189,7 @@
     },
     "index.html": {
       "bytes": 646,
-      "sha256": "0b9fc473bcef0ef381e611f05c7fc7e2fc0bf13a439a7eaab8916129f3ed45b9"
+      "sha256": "dc81091f3b859a14ec1dd40fd5aa831aa98ad5c25d8d1b0b71966f0165f307fe"
     },
     "models/awards.glb": {
       "bytes": 2187056,

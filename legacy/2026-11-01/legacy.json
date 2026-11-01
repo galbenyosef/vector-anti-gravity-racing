@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-01",
+  "reason": "build refresh: upstream build 95 (1c1257d5, VECTOR 1.7) -> 104 (dd722f6c, VECTOR 1.13 playtest 3)",
+  "note": "replaced = re-served with new bytes at the same path; upstream-gone = 404 on the new build (content-hashed names rotated)",
+  "files": [
+    {
+      "rel": "embed",
+      "bytes": 1776,
+      "sha256": "7e23f21cf0159aa3d65405daa08d42a418a91564c6532000b6b28626c1db4f6b",
+      "kind": "replaced"
+    },
+    {
+      "rel": "embed.css",
+      "bytes": 9831,
+      "sha256": "ab8c6ec5254b739d6b9270dbc3a79aacbcf56a5f353c2885ce5e870daf35d915",
+      "kind": "replaced"
+    },
+    {
+      "rel": "embed.js",
+      "bytes": 732728,
+      "sha256": "0c3bd2aadac43a34b93f7b6b7ada0229f5a14b4dc2b4b3b5d3a49c3801dcee83",
+      "kind": "replaced"
+    },
+    {
+      "rel": "index.html",
+      "bytes": 646,
+      "sha256": "0b9fc473bcef0ef381e611f05c7fc7e2fc0bf13a439a7eaab8916129f3ed45b9",
+      "kind": "replaced"
+    },
+    {
+      "rel": "assets/award-scene-D9Dc5ufv.js",
+      "bytes": 3841,
+      "sha256": "1bfaee4f48d1a96fa673b7ad9038ee5648f81e5a2aba7b930936b5e43c09acd7",
+      "kind": "upstream-gone"
+    },
+    {
+      "rel": "assets/game-CsnOSIff.js",
+      "bytes": 871481,
+      "sha256": "3b0330327be03ce22dee9e9dabf1a51ce7320bf2d1321cbd60a3c770f170ac4e",
+      "kind": "upstream-gone"
+    },
+    {
+      "rel": "assets/HDRLoader-C77IBAVq.js",
+      "bytes": 395149,
+      "sha256": "7b211936ab761c7a2c9c5f2c9dbfb7ffcf0977d8b7d9a63de68889caba045480",
+      "kind": "upstream-gone"
+    },
+    {
+      "rel": "assets/index-DphGw8Ou.js",
+      "bytes": 1577466,
+      "sha256": "0b3fea955da62724d7747788bc14130b9353482a14fc1c6d42a2f195a7f813d0",
+      "kind": "upstream-gone"
+    },
+    {
+      "rel": "assets/index-J7X__Wjw.css",
+      "bytes": 372266,
+      "sha256": "972b8d4d8e0ef1dcf9818eae66942caea722c8eb0b60c3d366ec65fa7ed2cff6",
+      "kind": "upstream-gone"
+    },
+    {
+      "rel": "assets/player-Cd-Kznkt.js",
+      "bytes": 81248,
+      "sha256": "dcaffd595783df3f11782b7458d225fc313d3930e2bc0c0fde25c85e08a4804f",
+      "kind": "upstream-gone"
+    },
+    {
+      "rel": "assets/renderer-setup--EktvnNe.js",
+      "bytes": 18038,
+      "sha256": "80a56d1113cfb18613b073088d163e05b3ae0ea90a1b0b33d7f3a19cca545016",
+      "kind": "upstream-gone"
+    },
+    {
+      "rel": "upstream-manifest-build-1c1257d5.json",
+      "bytes": 12974,
+      "sha256": "963e62636036d912330bad7583d67dbfbe7d1e1135adc6625874c477120d8f63",
+      "kind": "record"
+    }
+  ]
+}

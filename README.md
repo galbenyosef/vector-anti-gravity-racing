@@ -10,18 +10,20 @@ Source: https://wavedash.com/games/vector-anti-gravity-racing
 ## Stack
 
 - **Vite production bundle** — `index.html` loads the entry chunk
-  `assets/index-DphGw8Ou.js` (React runtime + React-Aria UI vendors, the app's
+  `assets/index-DF2rMRzV.js` (React runtime + React-Aria UI vendors, the app's
   music/track/ship tables, the bundled three.js WebGPU + TSL engine, the app UI)
 - **WebGPU renderer** — three.js `WebGPURenderer` with a WebGL2 backend
-  fallback; the game reports `WEBGPU` in its own footer; scenery and ships are
-  glTF kits/textures loaded from `models/` and `environment/`
+  fallback; the game reports `WEBGPU` in its own footer when a WebGPU adapter is
+  available and falls back to `WEBGL 2` under software rendering (as in the
+  headless boot below); scenery and ships are glTF kits/textures loaded from
+  `models/` and `environment/`
 - **Wavedash platform shell** — the game is delivered inside the platform's
   embed (`embed` / `embed.js` / `embed.css` / `sw-embed.js`), which mints the
   per-session gameplay JWT the build host's files need; the mirror carries those
   shell files at the paths the game requests
-- **Async scenery chunks** — `game-CsnOSIff.js` (race simulation),
-  `player-Cd-Kznkt.js` (intro/garage scene), `renderer-setup--EktvnNe.js` +
-  `award-scene-D9Dc5ufv.js` (scenery), `HDRLoader-C77IBAVq.js` (vendored
+- **Async scenery chunks** — `game-D43Oxqny.js` (race simulation),
+  `player-D3Mk6s3d.js` (intro/garage scene), `renderer-setup-PQ27DzE4.js` +
+  `award-scene-DZbn-o_G.js` (scenery), `HDRLoader-Bse-uZFj.js` (vendored
   three.js HDR loaders), `audio-preparation.worker-CEAJS9BC.js` (procedural
   audio worker), `client-BtP_tmtQ.js` (Wavedash SDK client shim)
 
@@ -35,9 +37,9 @@ weapons (mines/rockets/missile/cannon), a career/medal ladder and a 19-track
 music library. The game page is a SvelteKit platform shell whose GamePlayer
 iframe boots the per-build CDN host
 `<gameCloudId>-<user-hash>-<build-hash>.builds.wavedashcdn.com` (captured build
-`VECTOR 1.7`, buildNumber 95, engine `CUSTOM`, entrypoint `index.html`);
-captured whole: the entry shell, every JS chunk, the tileable scenery/ship
-payloads, HDRIs, music and award art — 86 files, ~165 MiB.
+`VECTOR 1.13 playtest 3`, buildNumber 104, engine `CUSTOM`, entrypoint
+`index.html`); captured whole: the entry shell, every JS chunk, the tileable
+scenery/ship payloads, HDRIs, music and award art — 86 files, ~165 MiB.
 
 External: the platform backend only — `convex-api.wavedash.com` (lobbies/cloud
 saves), `uploads.wavedash.com` / `ugc.wavedashcdn.com` (storage), Sentry
@@ -54,17 +56,24 @@ backend, recorded as gaps in `_mirror-report.json`.
   (live platform session)
 - `docs/boot-2026-10-13.png` — boot evidence: the mirror's main menu, served on
   loopback
+- `docs/boot-2026-11-01-refresh.png` — boot evidence for the refreshed build
+  (104): the main menu over a live Solstice Port scene, served on loopback with
+  the network blocked
 - `docs/serve-probe-2026-10-13.png` — serve-probe gameplay: the mirror racing
   at 461 km/h on loopback
 - `docs/network-log-2026-10-13.jsonl` — the browser session's request log
   (page load → main menu → intro/garage asset set → full 3-lap race → finish)
+- `legacy/2026-11-01/` — the replaced/rotated bytes from the build-95 capture
+  (4 re-served shell files + 7 upstream-gone chunks) with `SHA256SUMS.txt` +
+  `legacy.json`, plus the build-95 manifest
 - `readable/` — prettified derived layer (pinned prettier 3.9.6) for every
   captured JS/CSS file, plus the `embed` inline config block twin and
   `index-inline-map.json` (inline byte ranges + sha256)
-- `src/` + `split-spec.json` — 158 statement-aligned slices with the recorded
-  derivation spec (171 sections: 158 ranged + 8 wholeFile + 5 skipped-tail)
-- `tools/capture.mjs` — reproducible fetch of the build closure (playKey →
-  embed → gameplay JWT → every build file)
+- `src/` + `split-spec.json` — 162 statement-aligned slices with the recorded
+  derivation spec (175 sections: 162 ranged + 8 wholeFile + 5 skipped-tail)
+- `tools/capture.mjs` — reproducible fetch of the build closure (SSR build
+  reference + launch API playKey → embed → gameplay JWT → every build file;
+  content-hashed `assets/` chunks discovered from `index.html`)
 - `tools/derive.mjs` — rebuild `readable/` + `src/` + `split-spec.json`
 - `tools/update.mjs` — read-only drift probe against the live platform
 - `tools/verify.mjs` — re-hash the capture against the manifest
@@ -124,6 +133,24 @@ re-encoding).
 The mirror's existing "playable build" claim is confirmed, not refuted: the
 capture boots and races offline from local files alone.
 
+## Boot test (2026-11-01, refreshed build 104)
+
+- Entry: `http://127.0.0.1:4702/` (a free port probed with curl first) served by
+  `tools/serve.mjs`; headless Chrome
+  (`--host-resolver-rules="MAP * 127.0.0.1" --enable-unsafe-swiftshader
+  --use-angle=swiftshader`, 1280x720) driven over CDP.
+- Outcome: **rendered** — the refreshed build's main menu appeared over a live
+  Solstice Port scene (Kestrel on the grid, `RACE SETUP` panel, footer
+  `VECTOR 1.13 · WEBGL 2` — the software-rendering WebGL2 fallback, since the
+  headless SwiftShader adapter exposes no WebGPU device).
+- Evidence: body 376 chars; canvas 1262x540; title `VECTOR — Anti-Gravity
+  Racing`; 0 console errors; 35 same-origin 200s and 0 404s in the server log;
+  screenshot `docs/boot-2026-11-01-refresh.png`. Listener killed and the port
+  verified closed (`netstat`).
+
+The refreshed capture boots offline from local files alone; the earlier
+"playable build" claim holds for build 104.
+
 ## Verify
 
 ```
@@ -141,15 +168,15 @@ export name lost** — one row for every export table the capture ships: the fiv
 app chunks checked through their recorded pretty twins, and the two vendor
 chunks checked capture-to-pretty. Its two `NOT covered` rows are the export
 tables inside the *reading copies*
-`readable/assets__HDRLoader-C77IBAVq.pretty.js` and
+`readable/assets__HDRLoader-Bse-uZFj.pretty.js` and
 `readable/assets__client-BtP_tmtQ.pretty.js`. Each is the same statement as the
 served chunk's table, which the gate already compares through the whole-file
-section's recorded `origin` (`wholefile:assets/HDRLoader-C77IBAVq.js`,
+section's recorded `origin` (`wholefile:assets/HDRLoader-Bse-uZFj.js`,
 `wholefile:assets/client-BtP_tmtQ.js`); the only possible counterpart for a
 reading copy is the file itself, which the gate correctly refuses to count as a
-check. Both chunks are load-bearing — `HDRLoader-C77IBAVq.js` is imported by
-`renderer-setup--EktvnNe.js`, `award-scene-D9Dc5ufv.js`, `player-Cd-Kznkt.js`
-and `game-CsnOSIff.js`, and `client-BtP_tmtQ.js` is dynamically imported by the
+check. Both chunks are load-bearing — `HDRLoader-Bse-uZFj.js` is imported by
+`renderer-setup-PQ27DzE4.js`, `award-scene-DZbn-o_G.js`, `player-D3Mk6s3d.js`
+and `game-D43Oxqny.js`, and `client-BtP_tmtQ.js` is dynamically imported by the
 entry chunk (`await import("./client-BtP_tmtQ.js")`, default export) — and a
 rename on either side turns the gate red, naming the file and the lost name.
 Both vendor chunks are whole-file by policy and are never sliced, so no third
@@ -205,7 +232,10 @@ piece. It never guesses and never falls back to a stale key, so a silent shape
 change cannot masquerade as "up to date". A build change is reported as exit 1
 (`DRIFT: …`), and only a fully clean compare exits 0.
 
-### 2026-10-13 capture + derivation
+### 2026-10-13 capture + derivation (build 95 — historical)
+
+These are the numbers of the initial build-95 capture; the current layer was
+re-cut on 2026-11-01 for build 104 (see the next entry).
 
 - **Platform mechanics** — the game is served by a per-build CDN host
   (`mx70fsjxynf8mke9yqthamtfcx8dtssc-<user-hash>-1c1257d5.builds.wavedashcdn.com`),
@@ -271,7 +301,7 @@ change cannot masquerade as "up to date". A build change is reported as exit 1
   (three.js, Sentry) — no project source repository exists to fork, so the
   mirror stands.
 
-### 2026-11-01 probe repair + live drift
+### 2026-11-01 probe repair + refresh (build 95 → 104)
 
 - **Shape change** — the platform stopped server-rendering `playKey` in the game
   page payload (the page is still 200, no challenge; `gameCloud` and
@@ -285,7 +315,7 @@ change cannot masquerade as "up to date". A build change is reported as exit 1
   from the launch API, and cross-checks that the markup and launch build ids
   agree (a mismatch is reported as its own row). Still strictly read-only: it
   writes nothing and creates no `*.tmp`.
-- **Result — DRIFT, not refreshed in this lane.** The live build is
+- **Drift confirmed by the repaired probe** — the live build is
   `mn72mjx510z3mv4kgmzawyy53x8h9gc0` (buildNumber 104, `VECTOR 1.13 playtest 3`,
   192,507,792 bytes) versus the captured `mn72nb0gxmx9kbcvqffxsmyr1d8g0qj0`
   (buildNumber 95, `VECTOR 1.7`): build hash `1c1257d5` → `dd722f6c`.
@@ -293,11 +323,48 @@ change cannot masquerade as "up to date". A build change is reported as exit 1
   content-hashed chunks under `assets/` are live-missing — the live
   `index.html` now references `assets/index-DF2rMRzV.js` +
   `assets/index-D1wBW0TU.css`, so the captured hashed names no longer exist.
-  The `models/`, `environment/`, `audio/` and `ui/` payloads are byte-identical.
-  Per lane rules the capture was **not** refreshed: this is a report, not a
-  repair, and a refresh is a separate capture + re-cut.
-- **Gates at this point** — `node tools/verify.mjs` → `86 files checked,
-  0 problems`; `node tools/audit.js` → `AUDIT PASS`.
+  The origin mints a fresh anonymous `userId` per launch, so the CDN host
+  differs per run — the build bytes do not.
+- **Trust gate (before any write)** — every still-served manifest file was
+  re-fetched from the *new* build host and compared byte-for-byte with the
+  mirror: **75 identical** (32 `models/`, 11 `environment/`, 20 `audio/`,
+  6 `ui/`, plus `sw-embed.js`, `favicon.svg`, both fonts,
+  `assets/client-BtP_tmtQ.js` and `assets/audio-preparation.worker-CEAJS9BC.js`
+  — whose content-hashed names did not rotate), **4 differ** (`index.html`,
+  `embed`, `embed.css`, `embed.js`) and **7 gone**. The fetch path reproduces
+  the served bytes exactly, so writing the new bytes is safe.
+- **Archive** — the replaced/gone bytes are preserved under
+  `legacy/2026-11-01/` at their original paths, with `SHA256SUMS.txt` and
+  `legacy.json` (each archived file re-hashed against the build-95 manifest —
+  all match), plus `upstream-manifest-build-1c1257d5.json`.
+- **Re-capture** — `tools/capture.mjs` was repaired the same way (SSR build
+  reference + launch API playKey) and now discovers the content-hashed `assets/`
+  chunks by following the import graph from `index.html` instead of hard-coding
+  them; the payload universe (models/environment/audio/ui/fonts) is unchanged.
+  Result: **86 files, 173,009,746 bytes** — 1.0005× the previous closure, well
+  inside the 1.5× stop threshold (no explosion). The asset universe is
+  identical to build 95 (same 5 ships, 5 circuits, 20 audio tracks, 7 previews,
+  same tables); only the chunk names rotated. `favicon.ico` is still the only
+  404. The seven upstream-gone paths are recorded in `_mirror-report.json`
+  (`upstreamGone`).
+- **Re-cut records** — `.upstream/manifest.json` (86 files, 173,009,746 bytes),
+  `_mirror-report.json` (new build id/number/message, paths, size note) and
+  `_mirror-report.capture-log.json` (capture host + build id). `tools/derive.mjs`
+  and `tools/audit.js` were updated for the rotated chunk names (vendor
+  classification, the two content-anchored entry-chunk regions and the shape
+  guards), and the derived layers were re-cut: **readable/** 13 pretties,
+  **src/** 162 statement-aligned slices across 6 files, `split-spec.json`
+  175 sections (162 ranged + 8 wholeFile + 5 skipped), 72 `notRendered`
+  payloads; 163 orphan derived files from build 95 pruned.
+- **Gates (all green)** — `node tools/verify.mjs` → `86 files checked,
+  0 problems`; `node tools/audit.js` → `AUDIT PASS — 175 spec sections
+  (162/162 src↔pretty round-trips byte-exact, 13/13 pretties re-render
+  byte-exact, 17/17 imports resolve)`; `node tools/check-exports.mjs` → `7
+  export table(s) checked`, no public export name lost; `node tools/check-links.mjs`
+  → every export table names a binding the layer declares; `node tools/derive.mjs
+  --check` → `DERIVE CHECK PASS` (nothing written);
+  `node tools/update.mjs` → `up to date: 86 captured files identical upstream
+  (build dd722f6c)`. Boot test: see the 2026-11-01 boot section above.
 
 ## Mirror conventions
 
@@ -319,5 +386,5 @@ change cannot masquerade as "up to date". A build change is reported as exit 1
 <!-- cols: cls=classification · ver=verify 0 problems · upd=drift probe · man=manifest · rdbl=readable re-derived · src=reversed src · boot=boot test · top=offline-mirror topic · tag=backup tag · staged=staged not committed -->
 | # | repo | cls | ver | upd | man | rdbl | src | boot | top | tag | staged |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 313 | vector-anti-gravity-racing | mirror | ✓ | ✓ (2026-11-01: probe repaired for the new launch API; DRIFT — live build 104 vs captured 95, not refreshed) | ✓ | ✓ | ✓ | ✓ | ✓ | — | — |
+| 313 | vector-anti-gravity-racing | mirror | ✓ | ✓ (2026-11-01: probe + capture repaired for the new launch API; refreshed build 95 → 104, all gates green) | ✓ | ✓ | ✓ | ✓ | ✓ | — | — |
 <!-- mirror-status:end -->

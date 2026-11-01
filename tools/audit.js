@@ -463,29 +463,29 @@ const guardFile = (rel, checks) => {
   for (const [re, what] of checks)
     if (!re.test(txt)) problem(`${rel}: shape guard failed (${what})`);
 };
-guardFile("readable/assets__index-DphGw8Ou.pretty.js", [
+guardFile("readable/assets__index-DF2rMRzV.pretty.js", [
   [/WebGPURenderer/, "three.js WebGPU renderer (bundled vendor region)"],
   [/__THREE_DEVTOOLS__/, "three.js devtools registration"],
   [/solstice-port-mk3/, "the app's five-circuit track table"],
   [/audio\/vector-race\.mp3/, "the app's music-library table"],
   [/__WAVEDASH_GAME__|Wavedash/, "Wavedash platform wiring"],
 ]);
-guardFile("readable/assets__game-CsnOSIff.pretty.js", [
+guardFile("readable/assets__game-D43Oxqny.pretty.js", [
   [/solstice-port-kit\.glb/, "scenery kit (Solstice Port)"],
   [/models\/weapons\//, "weapon model table"],
   [/audio-preparation\.worker/, "procedural-audio worker URL"],
   [/RacerGame/, "the exported race-simulation class"],
 ]);
-guardFile("readable/assets__player-Cd-Kznkt.pretty.js", [
+guardFile("readable/assets__player-D3Mk6s3d.pretty.js", [
   [/lunar-earth/, "lunar sky textures (intro/garage scene)"],
   [/intro-vector\.mp3/, "intro theme"],
   [/models\/awards\.glb/, "award models"],
 ]);
-guardFile("readable/assets__renderer-setup--EktvnNe.pretty.js", [
+guardFile("readable/assets__renderer-setup-PQ27DzE4.pretty.js", [
   [/docklands_02_1k\.hdr/, "scenery HDRI (Docklands 02)"],
   [/shanghai_bund_1k\.hdr/, "scenery HDRI (Shanghai Bund)"],
 ]);
-guardFile("readable/assets__award-scene-D9Dc5ufv.pretty.js", [
+guardFile("readable/assets__award-scene-DZbn-o_G.pretty.js", [
   [/Trophy|Medal/, "award trophies/medals"],
 ]);
 guardFile("readable/assets__audio-preparation.worker-CEAJS9BC.pretty.js", [
@@ -493,7 +493,7 @@ guardFile("readable/assets__audio-preparation.worker-CEAJS9BC.pretty.js", [
   [/onmessage|postMessage/, "worker message protocol"],
   [/sampleRate/, "audio-rate handling"],
 ]);
-guardFile("readable/assets__HDRLoader-C77IBAVq.pretty.js", [
+guardFile("readable/assets__HDRLoader-Bse-uZFj.pretty.js", [
   [/Radiance|RGBE/, "three.js Radiance/RGBE HDR loader"],
   [/DataTexture/, "DataTexture machinery"],
 ]);

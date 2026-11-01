@@ -5,7 +5,7 @@ import crypto from "node:crypto";
 
 const root = process.argv[2] || ".";
 const outFile = process.argv[3] || ".upstream/manifest.json";
-const skipDirs = new Set(["tools", "docs", "readable", "src", ".upstream", ".git", "legacy", "node_modules", ".work"]);
+const skipDirs = new Set(["tools", "docs", "readable", "src", ".upstream", ".git", "legacy", "node_modules", ".work", "tmp"]);
 const skipFiles = new Set([".gitattributes", ".gitignore", "README.md", "_mirror-report.json", "_mirror-report.capture-log.json", "split-spec.json"]);
 const dynamic = new Set(["embed"]); // JWT/sessionToken rotate per response
 
