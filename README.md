@@ -163,12 +163,47 @@ honestly uncovered; the capture-side names are covered.
 node tools/update.mjs     # read-only drift probe: what changed upstream
 ```
 
-The probe boots the same platform session a browser would (SSR page → playKey →
-embed shell → gameplay JWT), derives the per-build CDN host, and compares every
-manifest file against the live bytes. It never rewrites the capture — a mirror
-is a point-in-time snapshot. Refreshing means re-running `node tools/capture.mjs`
-into a clean tree (or copying replaced files to `legacy/<date>/` first, PLAN §3)
-and re-cutting `readable/` + `src/` on top of the new build.
+The probe boots the same platform session a browser would (SSR page → build
+reference + playKey → embed shell → gameplay JWT), derives the per-build CDN
+host, and compares every manifest file against the live bytes. It never rewrites
+the capture — a mirror is a point-in-time snapshot. Refreshing means re-running
+`node tools/capture.mjs` into a clean tree (or copying replaced files to
+`legacy/<date>/` first, PLAN §3) and re-cutting `readable/` + `src/` on top of
+the new build.
+
+### Extraction rule (2026-11-01)
+
+Two separate live sources, both read-only:
+
+- **Build reference** — the game page
+  (`https://wavedash.com/games/vector-anti-gravity-racing`) server-renders its
+  SvelteKit hydration payload, which carries
+  `gameplayData:{ game, gameBuild, gameCloud, launchParams }`. The build
+  reference is `gameplayData.gameBuild._id`, alongside `gameCloud._id`,
+  `gameBuild.engine`, `gameBuild.entrypoint` and `gameBuild.buildNumber`. The
+  payload is devalue-serialized (unquoted keys, `void 0`), so it is **not**
+  JSON: `tools/update.mjs` bounds the object with a balanced-brace scan that
+  skips string literals, then reads the fields with narrow regexes. The old
+  per-load `playKey:"…"` field is **gone** from this payload — do not look for
+  it there.
+- **Play key** — now minted by the platform's launch API:
+  `POST https://wavedash.com/api/game-launch` with
+  `Content-Type: application/json` and body
+  `{"gameSlug":"vector-anti-gravity-racing"}`, answering
+  `200 { playKey, userId, gameBuild, gameCloud, anonymousUser }`. Cookieless
+  works (a fresh anonymous user + playKey per call). The per-build CDN host is
+  then
+  `<gameCloudId>-<fnv32(userId)>-<fnv32(gameBuildId)>.builds.wavedashcdn.com`
+  (FNV-1a 32-bit), and `GET /embed?…&pk=<playKey>` mints the ~1 h gameplay JWT.
+
+### Failure mode
+
+If either source changes shape — no `gameplayData:{…}` object in the markup, no
+`gameBuild._id`/`gameCloud._id` inside it, or no `playKey` in the launch
+response — `tools/update.mjs` exits **2** with a message naming the missing
+piece. It never guesses and never falls back to a stale key, so a silent shape
+change cannot masquerade as "up to date". A build change is reported as exit 1
+(`DRIFT: …`), and only a fully clean compare exits 0.
 
 ### 2026-10-13 capture + derivation
 
@@ -224,7 +259,8 @@ and re-cutting `readable/` + `src/` on top of the new build.
   `node tools/audit.js` → `AUDIT PASS` (171 sections, 158/158 round-trips,
   13/13 pretties re-render byte-exact, 13/13 provably distinct, 17/17 imports
   resolve); `node tools/update.mjs` → `up to date: 86 captured files identical
-  upstream (build 1c1257d5)`; serve probe — the mirror served on loopback,
+  upstream (build 1c1257d5)` (at capture time — see the 2026-11-01 entry below
+  for the current live build); serve probe — the mirror served on loopback,
   booted to the main menu and raced (461 km/h, `docs/serve-probe-2026-10-13.png`),
   listener killed, port closed (netstat). Rebuild derived layers with
   `node tools/derive.mjs`.
@@ -234,6 +270,34 @@ and re-cutting `readable/` + `src/` on top of the new build.
   in-game sponsor liveries (Anthropic/Claude) and vendored library issue links
   (three.js, Sentry) — no project source repository exists to fork, so the
   mirror stands.
+
+### 2026-11-01 probe repair + live drift
+
+- **Shape change** — the platform stopped server-rendering `playKey` in the game
+  page payload (the page is still 200, no challenge; `gameCloud` and
+  `anonymousUser` are still there). `tools/update.mjs` therefore exited 2 and
+  the mirror could not be probed at all. The playKey now comes from
+  `POST /api/game-launch`; the build reference still lives in the page's
+  embedded `gameplayData` JSON. Both were verified with two independent fetches
+  (page ×2, launch API ×2) before the fix was written.
+- **Probe** — `node tools/update.mjs` now reads `gameplayData.gameBuild._id`
+  from the markup, takes the playKey plus the authoritative build/cloud/user
+  from the launch API, and cross-checks that the markup and launch build ids
+  agree (a mismatch is reported as its own row). Still strictly read-only: it
+  writes nothing and creates no `*.tmp`.
+- **Result — DRIFT, not refreshed in this lane.** The live build is
+  `mn72mjx510z3mv4kgmzawyy53x8h9gc0` (buildNumber 104, `VECTOR 1.13 playtest 3`,
+  192,507,792 bytes) versus the captured `mn72nb0gxmx9kbcvqffxsmyr1d8g0qj0`
+  (buildNumber 95, `VECTOR 1.7`): build hash `1c1257d5` → `dd722f6c`.
+  `index.html`, `embed`, `embed.css` and `embed.js` changed, and the seven
+  content-hashed chunks under `assets/` are live-missing — the live
+  `index.html` now references `assets/index-DF2rMRzV.js` +
+  `assets/index-D1wBW0TU.css`, so the captured hashed names no longer exist.
+  The `models/`, `environment/`, `audio/` and `ui/` payloads are byte-identical.
+  Per lane rules the capture was **not** refreshed: this is a report, not a
+  repair, and a refresh is a separate capture + re-cut.
+- **Gates at this point** — `node tools/verify.mjs` → `86 files checked,
+  0 problems`; `node tools/audit.js` → `AUDIT PASS`.
 
 ## Mirror conventions
 
@@ -255,5 +319,5 @@ and re-cutting `readable/` + `src/` on top of the new build.
 <!-- cols: cls=classification · ver=verify 0 problems · upd=drift probe · man=manifest · rdbl=readable re-derived · src=reversed src · boot=boot test · top=offline-mirror topic · tag=backup tag · staged=staged not committed -->
 | # | repo | cls | ver | upd | man | rdbl | src | boot | top | tag | staged |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 313 | vector-anti-gravity-racing | mirror | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — | — |
+| 313 | vector-anti-gravity-racing | mirror | ✓ | ✓ (2026-11-01: probe repaired for the new launch API; DRIFT — live build 104 vs captured 95, not refreshed) | ✓ | ✓ | ✓ | ✓ | ✓ | — | — |
 <!-- mirror-status:end -->
